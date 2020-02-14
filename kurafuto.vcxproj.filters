@@ -7,6 +7,72 @@
 		<ClCompile Include="src\main.cpp">
 			<Filter>src</Filter>
 		</ClCompile>
+		<ClCompile Include="src\biome\HillBiome.cpp">
+			<Filter>src\biome</Filter>
+		</ClCompile>
+		<ClCompile Include="src\biome\PlainBiome.cpp">
+			<Filter>src\biome</Filter>
+		</ClCompile>
+		<ClCompile Include="src\biome\StairsBiome.cpp">
+			<Filter>src\biome</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\Camera.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\FirstPersonController.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\glfw.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\MouseScroll.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\Transform.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\WASDMove.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\GamePauseUI.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\GamePlayUI.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\PlayerHand.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\PlayScene.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\Shaders.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\Structs.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\TitleScene.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\WorldCreateScene.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\WorldOpenScene.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\scene\BaseScene.cpp">
+			<Filter>src\scene</Filter>
+		</ClCompile>
+		<ClCompile Include="src\scene\SceneManager.cpp">
+			<Filter>src\scene</Filter>
+		</ClCompile>
 		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Button.cpp">
 			<Filter>addons\ofxGameUI\src\gui</Filter>
 		</ClCompile>
@@ -168,6 +234,18 @@
 		<Filter Include="src">
 			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
 		</Filter>
+		<Filter Include="src\biome">
+			<UniqueIdentifier>{9DD12BD9-CE39-73C0-0F7E-CC70}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\common">
+			<UniqueIdentifier>{FE56CF09-06BA-2CDB-AEB6-C358}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\game">
+			<UniqueIdentifier>{097A2B9D-257B-165E-E663-6489}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\scene">
+			<UniqueIdentifier>{73142FC3-17CC-1CF8-54A8-DD1E}</UniqueIdentifier>
+		</Filter>
 		<Filter Include="addons">
 			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
 		</Filter>
@@ -235,6 +313,72 @@
 	<ItemGroup>
 		<ClInclude Include="src\ofApp.h">
 			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\biome\HillBiome.hpp">
+			<Filter>src\biome</Filter>
+		</ClInclude>
+		<ClInclude Include="src\biome\PlainBiome.hpp">
+			<Filter>src\biome</Filter>
+		</ClInclude>
+		<ClInclude Include="src\biome\StairsBiome.hpp">
+			<Filter>src\biome</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\Camera.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\FirstPersonController.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\glfw.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\MouseScroll.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\Transform.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\WASDMove.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\GamePauseUI.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\GamePlayUI.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\PlayerHand.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\PlayScene.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\Shaders.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\Structs.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\TitleScene.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\WorldCreateScene.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\WorldOpenScene.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\scene\BaseScene.hpp">
+			<Filter>src\scene</Filter>
+		</ClInclude>
+		<ClInclude Include="src\scene\IScene.hpp">
+			<Filter>src\scene</Filter>
+		</ClInclude>
+		<ClInclude Include="src\scene\SceneManager.hpp">
+			<Filter>src\scene</Filter>
 		</ClInclude>
 		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Button.hpp">
 			<Filter>addons\ofxGameUI\src\gui</Filter>

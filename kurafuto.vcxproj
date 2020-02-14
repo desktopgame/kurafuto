@@ -100,7 +100,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
 		</ClCompile>
@@ -120,7 +120,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<MultiProcessorCompilation>true</MultiProcessorCompilation>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
@@ -140,7 +140,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<MultiProcessorCompilation>true</MultiProcessorCompilation>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
@@ -163,7 +163,7 @@
 			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
 			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
 			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
 			<CompileAs>CompileAsCpp</CompileAs>
 			<ObjectFileName>$(IntDir)</ObjectFileName>
 		</ClCompile>
@@ -182,6 +182,26 @@
 	<ItemGroup>
 		<ClCompile Include="src\main.cpp" />
 		<ClCompile Include="src\ofApp.cpp" />
+		<ClCompile Include="src\biome\HillBiome.cpp" />
+		<ClCompile Include="src\biome\PlainBiome.cpp" />
+		<ClCompile Include="src\biome\StairsBiome.cpp" />
+		<ClCompile Include="src\common\Camera.cpp" />
+		<ClCompile Include="src\common\FirstPersonController.cpp" />
+		<ClCompile Include="src\common\glfw.cpp" />
+		<ClCompile Include="src\common\MouseScroll.cpp" />
+		<ClCompile Include="src\common\Transform.cpp" />
+		<ClCompile Include="src\common\WASDMove.cpp" />
+		<ClCompile Include="src\game\GamePauseUI.cpp" />
+		<ClCompile Include="src\game\GamePlayUI.cpp" />
+		<ClCompile Include="src\game\PlayerHand.cpp" />
+		<ClCompile Include="src\game\PlayScene.cpp" />
+		<ClCompile Include="src\game\Shaders.cpp" />
+		<ClCompile Include="src\game\Structs.cpp" />
+		<ClCompile Include="src\game\TitleScene.cpp" />
+		<ClCompile Include="src\game\WorldCreateScene.cpp" />
+		<ClCompile Include="src\game\WorldOpenScene.cpp" />
+		<ClCompile Include="src\scene\BaseScene.cpp" />
+		<ClCompile Include="src\scene\SceneManager.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Button.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.cpp" />
 		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Component.cpp" />
@@ -237,6 +257,27 @@
 	</ItemGroup>
 	<ItemGroup>
 		<ClInclude Include="src\ofApp.h" />
+		<ClInclude Include="src\biome\HillBiome.hpp" />
+		<ClInclude Include="src\biome\PlainBiome.hpp" />
+		<ClInclude Include="src\biome\StairsBiome.hpp" />
+		<ClInclude Include="src\common\Camera.hpp" />
+		<ClInclude Include="src\common\FirstPersonController.hpp" />
+		<ClInclude Include="src\common\glfw.hpp" />
+		<ClInclude Include="src\common\MouseScroll.hpp" />
+		<ClInclude Include="src\common\Transform.hpp" />
+		<ClInclude Include="src\common\WASDMove.hpp" />
+		<ClInclude Include="src\game\GamePauseUI.hpp" />
+		<ClInclude Include="src\game\GamePlayUI.hpp" />
+		<ClInclude Include="src\game\PlayerHand.hpp" />
+		<ClInclude Include="src\game\PlayScene.hpp" />
+		<ClInclude Include="src\game\Shaders.hpp" />
+		<ClInclude Include="src\game\Structs.hpp" />
+		<ClInclude Include="src\game\TitleScene.hpp" />
+		<ClInclude Include="src\game\WorldCreateScene.hpp" />
+		<ClInclude Include="src\game\WorldOpenScene.hpp" />
+		<ClInclude Include="src\scene\BaseScene.hpp" />
+		<ClInclude Include="src\scene\IScene.hpp" />
+		<ClInclude Include="src\scene\SceneManager.hpp" />
 		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Button.hpp" />
 		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.hpp" />
 		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Component.hpp" />
