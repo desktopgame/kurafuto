@@ -1,4 +1,4 @@
-# kurahuto
+# kurafuto
 minecraftクローンを目指しているプロジェクトです。
 
 ## ビルド
