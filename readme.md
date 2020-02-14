@@ -1,0 +1,2 @@
+# kurahuto
+minecraftクローンを目指しているプロジェクトです。
