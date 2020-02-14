@@ -1,368 +1,366 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup Label="ProjectConfigurations">
-		<ProjectConfiguration Include="Debug|Win32">
-			<Configuration>Debug</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Debug|x64">
-			<Configuration>Debug</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Release|Win32">
-			<Configuration>Release</Configuration>
-			<Platform>Win32</Platform>
-		</ProjectConfiguration>
-		<ProjectConfiguration Include="Release|x64">
-			<Configuration>Release</Configuration>
-			<Platform>x64</Platform>
-		</ProjectConfiguration>
-	</ItemGroup>
-	<PropertyGroup Condition="'$(WindowsTargetPlatformVersion)'==''">
-		<LatestTargetPlatformVersion>$([Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion('Windows', '10.0'))</LatestTargetPlatformVersion>
-		<WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
-		<TargetPlatformVersion>$(WindowsTargetPlatformVersion)</TargetPlatformVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Globals">
-		<ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
-		<Keyword>Win32Proj</Keyword>
-		<RootNamespace>kurafuto</RootNamespace>
-	</PropertyGroup>
-	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-		<ConfigurationType>Application</ConfigurationType>
-		<CharacterSet>Unicode</CharacterSet>
-		<PlatformToolset>v141</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-		<ConfigurationType>Application</ConfigurationType>
-		<CharacterSet>Unicode</CharacterSet>
-		<PlatformToolset>v141</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-		<ConfigurationType>Application</ConfigurationType>
-		<CharacterSet>Unicode</CharacterSet>
-		<WholeProgramOptimization>true</WholeProgramOptimization>
-		<PlatformToolset>v141</PlatformToolset>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-		<ConfigurationType>Application</ConfigurationType>
-		<CharacterSet>Unicode</CharacterSet>
-		<WholeProgramOptimization>true</WholeProgramOptimization>
-		<PlatformToolset>v141</PlatformToolset>
-	</PropertyGroup>
-	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
-	</ImportGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
-	</ImportGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
-	</ImportGroup>
-	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
-		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
-	</ImportGroup>
-	<PropertyGroup Label="UserMacros" />
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-		<OutDir>bin\</OutDir>
-		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
-		<TargetName>$(ProjectName)_debug</TargetName>
-		<LinkIncremental>true</LinkIncremental>
-		<GenerateManifest>true</GenerateManifest>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-		<OutDir>bin\</OutDir>
-		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
-		<TargetName>$(ProjectName)_debug</TargetName>
-		<LinkIncremental>true</LinkIncremental>
-		<GenerateManifest>true</GenerateManifest>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-		<OutDir>bin\</OutDir>
-		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
-		<LinkIncremental>false</LinkIncremental>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-		<OutDir>bin\</OutDir>
-		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
-		<LinkIncremental>false</LinkIncremental>
-	</PropertyGroup>
-	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-		<ClCompile>
-			<Optimization>Disabled</Optimization>
-			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
-			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
-			<CompileAs>CompileAsCpp</CompileAs>
-			<ObjectFileName>$(IntDir)</ObjectFileName>
-		</ClCompile>
-		<Link>
-			<GenerateDebugInformation>true</GenerateDebugInformation>
-			<SubSystem>Console</SubSystem>
-			<RandomizedBaseAddress>false</RandomizedBaseAddress>
-			<AdditionalDependencies>%(AdditionalDependencies);SOIL.lib;soil.lib</AdditionalDependencies>
-			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs</AdditionalLibraryDirectories>
-		</Link>
-		<PostBuildEvent />
-	</ItemDefinitionGroup>
-	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-		<ClCompile>
-			<Optimization>Disabled</Optimization>
-			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
-			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
-			<CompileAs>CompileAsCpp</CompileAs>
-			<MultiProcessorCompilation>true</MultiProcessorCompilation>
-			<ObjectFileName>$(IntDir)</ObjectFileName>
-		</ClCompile>
-		<Link>
-			<GenerateDebugInformation>true</GenerateDebugInformation>
-			<SubSystem>Console</SubSystem>
-			<RandomizedBaseAddress>false</RandomizedBaseAddress>
-			<AdditionalDependencies>%(AdditionalDependencies);SOIL.lib;soil.lib</AdditionalDependencies>
-			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs</AdditionalLibraryDirectories>
-		</Link>
-		<PostBuildEvent />
-	</ItemDefinitionGroup>
-	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-		<ClCompile>
-			<WholeProgramOptimization>false</WholeProgramOptimization>
-			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
-			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
-			<CompileAs>CompileAsCpp</CompileAs>
-			<MultiProcessorCompilation>true</MultiProcessorCompilation>
-			<ObjectFileName>$(IntDir)</ObjectFileName>
-		</ClCompile>
-		<Link>
-			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-			<GenerateDebugInformation>false</GenerateDebugInformation>
-			<SubSystem>Console</SubSystem>
-			<OptimizeReferences>true</OptimizeReferences>
-			<EnableCOMDATFolding>true</EnableCOMDATFolding>
-			<RandomizedBaseAddress>false</RandomizedBaseAddress>
-			<AdditionalDependencies>%(AdditionalDependencies);SOIL.lib;soil.lib</AdditionalDependencies>
-			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs</AdditionalLibraryDirectories>
-		</Link>
-		<PostBuildEvent />
-	</ItemDefinitionGroup>
-	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-		<ClCompile>
-			<WholeProgramOptimization>false</WholeProgramOptimization>
-			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
-			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-			<WarningLevel>Level3</WarningLevel>
-			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
-			<CompileAs>CompileAsCpp</CompileAs>
-			<ObjectFileName>$(IntDir)</ObjectFileName>
-		</ClCompile>
-		<Link>
-			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-			<GenerateDebugInformation>false</GenerateDebugInformation>
-			<SubSystem>Console</SubSystem>
-			<OptimizeReferences>true</OptimizeReferences>
-			<EnableCOMDATFolding>true</EnableCOMDATFolding>
-			<RandomizedBaseAddress>false</RandomizedBaseAddress>
-			<AdditionalDependencies>%(AdditionalDependencies);SOIL.lib;soil.lib</AdditionalDependencies>
-			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs</AdditionalLibraryDirectories>
-		</Link>
-		<PostBuildEvent />
-	</ItemDefinitionGroup>
-	<ItemGroup>
-		<ClCompile Include="src\main.cpp" />
-		<ClCompile Include="src\ofApp.cpp" />
-		<ClCompile Include="src\biome\HillBiome.cpp" />
-		<ClCompile Include="src\biome\PlainBiome.cpp" />
-		<ClCompile Include="src\biome\StairsBiome.cpp" />
-		<ClCompile Include="src\common\Camera.cpp" />
-		<ClCompile Include="src\common\FirstPersonController.cpp" />
-		<ClCompile Include="src\common\glfw.cpp" />
-		<ClCompile Include="src\common\MouseScroll.cpp" />
-		<ClCompile Include="src\common\Transform.cpp" />
-		<ClCompile Include="src\common\WASDMove.cpp" />
-		<ClCompile Include="src\game\GamePauseUI.cpp" />
-		<ClCompile Include="src\game\GamePlayUI.cpp" />
-		<ClCompile Include="src\game\PlayerHand.cpp" />
-		<ClCompile Include="src\game\PlayScene.cpp" />
-		<ClCompile Include="src\game\Shaders.cpp" />
-		<ClCompile Include="src\game\Structs.cpp" />
-		<ClCompile Include="src\game\TitleScene.cpp" />
-		<ClCompile Include="src\game\WorldCreateScene.cpp" />
-		<ClCompile Include="src\game\WorldOpenScene.cpp" />
-		<ClCompile Include="src\scene\BaseScene.cpp" />
-		<ClCompile Include="src\scene\SceneManager.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Button.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Component.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Container.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Dropdown.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\FontCache.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\FontSprite.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\GUIUtility.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Image.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\InputField.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Label.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxIcon\src\ofxIcon.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\biome\BasicBiome.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Block.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockInfoCollection.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockPack.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockRenderer.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockTable.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Chunk.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\csvr\Parser.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\CubeBatch.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\CubeRenderer.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Cell.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Generator.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise\LICENSE.txt" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Pocket.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Terrain.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\GraphicsBatch.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\GraphicsRenderer.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\IntVec2Hash.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\IntVec3Compare.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\LightTable.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Math.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\MultiBlock.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\objb\MtlBuilder.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\objb\ObjBuilder.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\picojson\LICENSE" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Plane.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Planet.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Random.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Texture.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TextureInfoCollection.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TexturePack.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TextureSet.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\WeightTable.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\World.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\WorldIO.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxSOIL\src\ofxSOIL.cpp" />
-		<ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_DXT.c" />
-		<ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.c" />
-		<ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.c" />
-		<ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.c" />
-	</ItemGroup>
-	<ItemGroup>
-		<ClInclude Include="src\ofApp.h" />
-		<ClInclude Include="src\biome\HillBiome.hpp" />
-		<ClInclude Include="src\biome\PlainBiome.hpp" />
-		<ClInclude Include="src\biome\StairsBiome.hpp" />
-		<ClInclude Include="src\common\Camera.hpp" />
-		<ClInclude Include="src\common\FirstPersonController.hpp" />
-		<ClInclude Include="src\common\glfw.hpp" />
-		<ClInclude Include="src\common\MouseScroll.hpp" />
-		<ClInclude Include="src\common\Transform.hpp" />
-		<ClInclude Include="src\common\WASDMove.hpp" />
-		<ClInclude Include="src\game\GamePauseUI.hpp" />
-		<ClInclude Include="src\game\GamePlayUI.hpp" />
-		<ClInclude Include="src\game\PlayerHand.hpp" />
-		<ClInclude Include="src\game\PlayScene.hpp" />
-		<ClInclude Include="src\game\Shaders.hpp" />
-		<ClInclude Include="src\game\Structs.hpp" />
-		<ClInclude Include="src\game\TitleScene.hpp" />
-		<ClInclude Include="src\game\WorldCreateScene.hpp" />
-		<ClInclude Include="src\game\WorldOpenScene.hpp" />
-		<ClInclude Include="src\scene\BaseScene.hpp" />
-		<ClInclude Include="src\scene\IScene.hpp" />
-		<ClInclude Include="src\scene\SceneManager.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Button.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Component.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Container.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Dropdown.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\FontCache.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\FontSprite.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\GUISkin.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\GUIUtility.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\IEventHandler.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Image.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\InputField.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Label.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxGameUI\src\ofxGameUI.h" />
-		<ClInclude Include="..\..\..\addons\ofxIcon\src\ofxIcon.h" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\ofxPlanet.h" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\biome\BasicBiome.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\biome\Biome.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Block.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockInfoCollection.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockPack.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockRenderer.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockShape.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockSide.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockTable.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Chunk.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\csvr\Parser.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\CubeBatch.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\CubeRenderer.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Cell.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Generator.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise\PerlinNoise.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Pocket.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Terrain.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\GraphicsBatch.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\GraphicsRenderer.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\IntVec2Hash.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\IntVec3Compare.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\LightTable.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Math.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\MultiBlock.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\objb\MtlBuilder.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\objb\ObjBuilder.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Optional.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\picojson\picojson.h" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Plane.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Planet.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Random.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Texture.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TextureInfoCollection.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TexturePack.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TextureSet.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\WeightTable.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\World.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\WorldIO.hpp" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\src\ofxSOIL.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\image_DXT.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\image_helper.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\SOIL.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stbi_DDS_aug.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stbi_DDS_aug_c.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stb_image_aug.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_DXT.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug_c.h" />
-		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.h" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
-			<Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
-		</ProjectReference>
-	</ItemGroup>
-	<ItemGroup>
-		<ResourceCompile Include="icon.rc">
-			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
-			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
-			<AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
-		</ResourceCompile>
-	</ItemGroup>
-	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-	<ProjectExtensions>
-		<VisualStudio>
-			<UserProperties RESOURCE_FILE="icon.rc" />
-		</VisualStudio>
-	</ProjectExtensions>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Condition="'$(WindowsTargetPlatformVersion)'==''">
+    <LatestTargetPlatformVersion>$([Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion('Windows', '10.0'))</LatestTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
+    <TargetPlatformVersion>$(WindowsTargetPlatformVersion)</TargetPlatformVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>kurafuto</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>bin\</OutDir>
+    <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);SOIL.lib;soil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);SOIL.lib;soil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);SOIL.lib;soil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;src\biome;src\common;src\game;src\scene;..\..\..\addons\ofxGameUI\libs;..\..\..\addons\ofxGameUI\src;..\..\..\addons\ofxGameUI\src\gui;..\..\..\addons\ofxIcon\libs;..\..\..\addons\ofxIcon\src;..\..\..\addons\ofxPlanet\libs;..\..\..\addons\ofxPlanet\src;..\..\..\addons\ofxPlanet\src\world;..\..\..\addons\ofxPlanet\src\world\biome;..\..\..\addons\ofxPlanet\src\world\csvr;..\..\..\addons\ofxPlanet\src\world\engine;..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise;..\..\..\addons\ofxPlanet\src\world\objb;..\..\..\addons\ofxPlanet\src\world\picojson;..\..\..\addons\ofxSOIL\libs;..\..\..\addons\ofxSOIL\libs\SOIL;..\..\..\addons\ofxSOIL\libs\SOIL\includes;..\..\..\addons\ofxSOIL\libs\SOIL\lib;..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs;..\..\..\addons\ofxSOIL\libs\SOIL\src;..\..\..\addons\ofxSOIL\src</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <AdditionalDependencies>%(AdditionalDependencies);SOIL.lib;soil.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxSOIL\libs\SOIL\lib\vs</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\biome\HillBiome.cpp" />
+    <ClCompile Include="src\biome\PlainBiome.cpp" />
+    <ClCompile Include="src\biome\StairsBiome.cpp" />
+    <ClCompile Include="src\common\Camera.cpp" />
+    <ClCompile Include="src\common\FirstPersonController.cpp" />
+    <ClCompile Include="src\common\glfw.cpp" />
+    <ClCompile Include="src\common\MouseScroll.cpp" />
+    <ClCompile Include="src\common\Transform.cpp" />
+    <ClCompile Include="src\common\WASDMove.cpp" />
+    <ClCompile Include="src\game\GamePauseUI.cpp" />
+    <ClCompile Include="src\game\GamePlayUI.cpp" />
+    <ClCompile Include="src\game\PlayerHand.cpp" />
+    <ClCompile Include="src\game\PlayScene.cpp" />
+    <ClCompile Include="src\game\Shaders.cpp" />
+    <ClCompile Include="src\game\Structs.cpp" />
+    <ClCompile Include="src\game\TitleScene.cpp" />
+    <ClCompile Include="src\game\WorldCreateScene.cpp" />
+    <ClCompile Include="src\game\WorldOpenScene.cpp" />
+    <ClCompile Include="src\scene\BaseScene.cpp" />
+    <ClCompile Include="src\scene\SceneManager.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Button.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Component.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Container.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Dropdown.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\FontCache.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\FontSprite.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\GUIUtility.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Image.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\InputField.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Label.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxIcon\src\ofxIcon.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\biome\BasicBiome.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Block.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockInfoCollection.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockPack.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockRenderer.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockTable.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Chunk.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\csvr\Parser.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\CubeBatch.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\CubeRenderer.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Cell.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Generator.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Pocket.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Terrain.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\GraphicsBatch.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\GraphicsRenderer.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\IntVec2Hash.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\IntVec3Compare.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\LightTable.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Math.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\MultiBlock.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\objb\MtlBuilder.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\objb\ObjBuilder.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Plane.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Planet.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Random.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Texture.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TextureInfoCollection.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TexturePack.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TextureSet.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\WeightTable.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\World.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\WorldIO.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSOIL\src\ofxSOIL.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_DXT.c" />
+    <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.c" />
+    <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.c" />
+    <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\biome\HillBiome.hpp" />
+    <ClInclude Include="src\biome\PlainBiome.hpp" />
+    <ClInclude Include="src\biome\StairsBiome.hpp" />
+    <ClInclude Include="src\common\Camera.hpp" />
+    <ClInclude Include="src\common\FirstPersonController.hpp" />
+    <ClInclude Include="src\common\glfw.hpp" />
+    <ClInclude Include="src\common\MouseScroll.hpp" />
+    <ClInclude Include="src\common\Transform.hpp" />
+    <ClInclude Include="src\common\WASDMove.hpp" />
+    <ClInclude Include="src\game\GamePauseUI.hpp" />
+    <ClInclude Include="src\game\GamePlayUI.hpp" />
+    <ClInclude Include="src\game\PlayerHand.hpp" />
+    <ClInclude Include="src\game\PlayScene.hpp" />
+    <ClInclude Include="src\game\Shaders.hpp" />
+    <ClInclude Include="src\game\Structs.hpp" />
+    <ClInclude Include="src\game\TitleScene.hpp" />
+    <ClInclude Include="src\game\WorldCreateScene.hpp" />
+    <ClInclude Include="src\game\WorldOpenScene.hpp" />
+    <ClInclude Include="src\scene\BaseScene.hpp" />
+    <ClInclude Include="src\scene\IScene.hpp" />
+    <ClInclude Include="src\scene\SceneManager.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Button.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Component.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Container.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Dropdown.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\FontCache.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\FontSprite.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\GUISkin.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\GUIUtility.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\IEventHandler.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Image.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\InputField.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Label.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\ofxGameUI.h" />
+    <ClInclude Include="..\..\..\addons\ofxIcon\src\ofxIcon.h" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\ofxPlanet.h" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\biome\BasicBiome.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\biome\Biome.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Block.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockInfoCollection.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockPack.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockRenderer.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockShape.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockSide.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockTable.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Chunk.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\csvr\Parser.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\CubeBatch.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\CubeRenderer.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Cell.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Generator.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise\PerlinNoise.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Pocket.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Terrain.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\GraphicsBatch.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\GraphicsRenderer.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\IntVec2Hash.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\IntVec3Compare.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\LightTable.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Math.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\MultiBlock.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\objb\MtlBuilder.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\objb\ObjBuilder.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Optional.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\picojson\picojson.h" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Plane.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Planet.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Random.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Texture.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TextureInfoCollection.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TexturePack.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TextureSet.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\WeightTable.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\World.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\WorldIO.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\src\ofxSOIL.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\image_DXT.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\image_helper.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\SOIL.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stbi_DDS_aug.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stbi_DDS_aug_c.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stb_image_aug.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_DXT.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug_c.h" />
+    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
+      <Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="icon.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
