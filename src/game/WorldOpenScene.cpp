@@ -63,6 +63,26 @@ void WorldOpenScene::onInit() {
 	backButton->callback = std::bind(&WorldOpenScene::on_back, this);
 }
 
+void WorldOpenScene::onShow() {
+	//ディレクトリを読み込む
+	ofDirectory playDir("play");
+	if (!playDir.exists()) {
+		playDir.create();
+	}
+	playDir.allowExt("dat");
+	int files = playDir.listDir();
+	worldDropdown->unload();
+	worldDropdown->uninstallCanvas(&canvas);
+	worldDropdown->items.clear();
+	for (int i = 0; i < files; i++) {
+		auto file = playDir.getFile(i);
+		fileVec.emplace_back(file);
+		worldDropdown->items.push_back(file.getFileName());
+	}
+	worldDropdown->load();
+	worldDropdown->installCanvas(&canvas);
+}
+
 void WorldOpenScene::onDraw() {
 	canvas.draw();
 }

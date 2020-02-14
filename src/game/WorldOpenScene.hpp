@@ -18,6 +18,7 @@ public:
 	ofFile getOpenFile() const;
 protected:
 	void onInit() override;
+	void onShow() override;
 	void onDraw() override;
 	void on_open();
 	void on_back();
