@@ -245,7 +245,7 @@ void PlayScene::saveWorld() {
 		playDir.create();
 	}
 	std::ofstream ofs(ofFilePath::join("./data/play/", fileName + ".dat"));
-	ofs << createScene->getWorldName() << std::endl;
+	ofs << fileName << std::endl;
 	ofs << size.x << std::endl;
 	ofs << size.y << std::endl;
 	ofs << size.z << std::endl;
