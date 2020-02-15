@@ -81,7 +81,7 @@ void GamePauseUI::mousePressed(int x, int y, int button) {
 	glm::vec3 offset = glm::vec3(1280 - 600, 720 - 450, 0) / 2;
 	offset.x += 10;
 	offset.y += 10;
-	for (int i = 0; i < blockImages.size(); i++) {
+	for (int i = 0; i < static_cast<int>(blockImages.size()); i++) {
 		auto blockImg = blockImages.at(i);
 		bool hit = blockImg.image->isContains(x, y);
 		if (hit) {
