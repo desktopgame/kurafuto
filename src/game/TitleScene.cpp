@@ -2,7 +2,7 @@
 #include <ofGraphics.h>
 #include <ofMatrixStack.h>
 
-TitleScene::TitleScene() : titleLabel(), newWorldImage(), openWorldImage()  {
+TitleScene::TitleScene() : canvas(), titleLabel(), newWorldImage(), openWorldImage()  {
 	this->nextScene = "Play";
 }
 
