@@ -1,6 +1,6 @@
 #include "HillBiome.hpp"
 
-HillBiome::HillBiome()
+HillBiome::HillBiome() : BasicBiome()
 {
 }
 
