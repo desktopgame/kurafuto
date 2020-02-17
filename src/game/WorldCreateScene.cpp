@@ -2,7 +2,9 @@
 #include <ofGraphics.h>
 
 WorldCreateScene::WorldCreateScene()
-	: biomeLabel(),
+	:
+	canvas(),
+	biomeLabel(),
 	worldNameLabel(),
 	sizeLabel(),
 	worldNameInputField(),
