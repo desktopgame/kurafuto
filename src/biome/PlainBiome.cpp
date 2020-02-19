@@ -1,7 +1,7 @@
 #include "PlainBiome.hpp"
 #include <algorithm>
 
-PlainBiome::PlainBiome(const std::string & structure, int weight) :structure(structure),weight(weight) {
+PlainBiome::PlainBiome(const std::string & structure, int weight) : BasicBiome(), structure(structure),weight(weight) {
 }
 
 void PlainBiome::onBeginGenerateWorld(ofxPlanet::BlockTable & blockTable) {

@@ -6,6 +6,8 @@ PlayerHand::PlayerHand(std::shared_ptr<ofxPlanet::Planet> planet, planet::FirstP
  : planet(planet), 
    fpsCon(fpsCon),
    camera(camera),
+	putAt(),
+	destroyAt(),
    putBox(),
    destroyBox(){
 	putBox.set(2.0f);

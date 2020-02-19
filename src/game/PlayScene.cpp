@@ -23,11 +23,13 @@ PlayScene::PlayScene(std::weak_ptr<WorldCreateScene> createSceneRef, std::weak_p
 	openSceneRef(openSceneRef), 
 	planet(nullptr),
 	biomeMap(),
+	fileName(),
+	size(),
 	shader(),
 	camera(), 
 	playUI(),
 	pauseUI(),
-	fpsCon(), playMode(false), playSceneNow(false) {
+	fpsCon(), playMode(false), playSceneNow(false), playerHand(){
 	fpsCon.setRotateSpeed(1.0f);
 	fpsCon.setMoveSpeed(1.0f);
 	fpsCon.setMode(planet::FirstPersonController::Mode::Key);

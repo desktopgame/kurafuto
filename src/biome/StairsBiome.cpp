@@ -1,6 +1,6 @@
 #include "StairsBiome.hpp"
 
-StairsBiome::StairsBiome(const std::string& structure, int weight) : structure(structure), weight(weight) {
+StairsBiome::StairsBiome(const std::string& structure, int weight) : BasicBiome(), structure(structure), weight(weight) {
 }
 
 void StairsBiome::onBeginGenerateWorld(ofxPlanet::BlockTable & blockTable) {
