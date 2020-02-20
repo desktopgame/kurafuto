@@ -73,11 +73,11 @@ void PlayScene::onInit() {
 	shader.bindDefaults();
 	shader.linkProgram();
 	this->planet = std::make_shared<ofxPlanet::Planet>(shader);
-	biomeMap.insert_or_assign("Stairs/Tree", std::make_shared<StairsBiome>(Structs::TREE, 12));
-	biomeMap.insert_or_assign("Stairs/House", std::make_shared<StairsBiome>(Structs::HOUSE, 12));
-	biomeMap.insert_or_assign("Plain/Tree", std::make_shared<PlainBiome>(Structs::TREE, 12));
-	biomeMap.insert_or_assign("Plain/House", std::make_shared<PlainBiome>(Structs::HOUSE, 36));
-	biomeMap.insert_or_assign("Hill", std::make_shared<HillBiome>());
+	biomeMap.insert_or_assign("Stairs/Tree", []() { return std::make_shared<StairsBiome>(Structs::TREE, 12); });
+	biomeMap.insert_or_assign("Stairs/House", []() { return std::make_shared<StairsBiome>(Structs::HOUSE, 12); });
+	biomeMap.insert_or_assign("Plain/Tree", []() { return std::make_shared<PlainBiome>(Structs::TREE, 12); });
+	biomeMap.insert_or_assign("Plain/House", [] {return std::make_shared<PlainBiome>(Structs::HOUSE, 36); });
+	biomeMap.insert_or_assign("Hill", []() {return std::make_shared<HillBiome>(); });
 	this->playerHand = std::make_shared<PlayerHand>(planet, fpsCon, camera);
 }
 
@@ -142,6 +142,7 @@ void PlayScene::onDraw() {
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 	planet->getWorld()->getChunk()->draw();
+
 	playerHand->drawPutBlock();
 	playerHand->drawDestroyBlock();
 	
@@ -229,7 +230,7 @@ void PlayScene::loadWorld() {
 		else if (sizeStr == "Big") {
 			this->size = glm::ivec3(160, 64, 160);
 		}
-		planet->generate(size, biomeMap.at(createScene->getBiome()));
+		planet->generate(size, biomeMap.at(createScene->getBiome())());
 		planet->getWorld()->getChunk()->split(32);
 		this->fileName = createScene->getWorldName();
 	}
