@@ -16,7 +16,8 @@ FirstPersonController::FirstPersonController()
       moveSpeed(0.2f),
       jumpSpeed(0.6f),
       rotateSpeed(0.1f),
-      velocity() {}
+      velocity(),
+	moveLeft(false), moveRight(false), moveFront(false), moveBack(false){}
 
 void FirstPersonController::enable() {
         mouseScroll.enable();
