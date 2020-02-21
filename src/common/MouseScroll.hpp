@@ -1,29 +1,29 @@
-#pragma once
+ï»¿#pragma once
 #ifndef COMMON_MOUSESCROLL_HPP
 #define COMMON_MOUSESCROLL_HPP
 #include <ofVec3f.h>
 namespace planet {
 /**
  * MouseScroll
- * ‚ÍA’¼‘O‚Ìƒ}ƒEƒXÀ•W‚ÆŒ»İ‚Ìƒ}ƒEƒXÀ•W‚©‚ç‚Ç‚ê‚¾‚¯ˆÚ“®‚µ‚½‚©‚ğŒvZ‚·‚éƒNƒ‰ƒX‚Å‚·B
+ * ã¯ã€ç›´å‰ã®ãƒã‚¦ã‚¹åº§æ¨™ã¨ç¾åœ¨ã®ãƒã‚¦ã‚¹åº§æ¨™ã‹ã‚‰ã©ã‚Œã ã‘ç§»å‹•ã—ãŸã‹ã‚’è¨ˆç®—ã™ã‚‹ã‚¯ãƒ©ã‚¹ã§ã™ã€‚
  */
 class MouseScroll {
        public:
         explicit MouseScroll();
         /**
-         * —LŒø‰»‚µ‚Ü‚·B
+         * æœ‰åŠ¹åŒ–ã—ã¾ã™ã€‚
          */
         void enable();
         /**
-         * –³Œø‰»‚µ‚Ü‚·B
+         * ç„¡åŠ¹åŒ–ã—ã¾ã™ã€‚
          */
         void disable();
         /**
-         * ˆÚ“®—Ê‚ğŒvZ‚µ‚Ü‚·B
+         * ç§»å‹•é‡ã‚’è¨ˆç®—ã—ã¾ã™ã€‚
          */
         void update();
         /**
-         * ˆÚ“®—Ê‚ğŒvZ‚µ‚Ü‚·B
+         * ç§»å‹•é‡ã‚’è¨ˆç®—ã—ã¾ã™ã€‚
          * @return
          */
         glm::vec2 getAmount() const;

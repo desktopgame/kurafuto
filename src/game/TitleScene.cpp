@@ -1,4 +1,4 @@
-#include "TitleScene.hpp"
+ï»¿#include "TitleScene.hpp"
 #include <ofGraphics.h>
 #include <ofMatrixStack.h>
 
@@ -26,8 +26,8 @@ void TitleScene::onInit() {
 	ofEnableAlphaBlending();
 	this->newWorldImage = canvas.addComponent<ofxGameUI::Button>();
 	this->openWorldImage = canvas.addComponent<ofxGameUI::Button>();
-	newWorldImage->text = u8"ƒ[ƒ‹ƒh‚ðì¬";
-	openWorldImage->text = u8"ƒ[ƒ‹ƒh‚ðŠJ‚­";
+	newWorldImage->text = u8"ãƒ¯ãƒ¼ãƒ«ãƒ‰ã‚’ä½œæˆ";
+	openWorldImage->text = u8"ãƒ¯ãƒ¼ãƒ«ãƒ‰ã‚’é–‹ã";
 	canvas.load();
 	newWorldImage->center(w, h);
 	newWorldImage->position += glm::vec3(0, 150, 0);

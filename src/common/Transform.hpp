@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #ifndef SHADER_TRANSFORM_HPP
 #define SHADER_TRANSFORM_HPP
 #include <ofVec3f.h>
 namespace planet {
 /**
- * Transform ‚ÍAƒIƒuƒWƒFƒNƒg‚ÌÀ•W,‰ñ“]‚È‚Ç‚ğ‚ÂƒNƒ‰ƒX‚Å‚·B
+ * Transform ã¯ã€ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®åº§æ¨™,å›è»¢ãªã©ã‚’æŒã¤ã‚¯ãƒ©ã‚¹ã§ã™ã€‚
  */
 struct Transform {
         Transform();

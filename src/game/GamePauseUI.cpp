@@ -1,4 +1,4 @@
-#include "GamePauseUI.hpp"
+ï»¿#include "GamePauseUI.hpp"
 #include <ofxPlanet.h>
 
 GamePauseUI::GamePauseUI() : 
@@ -17,14 +17,14 @@ GamePauseUI::GamePauseUI() :
 void GamePauseUI::init() {
 
 	this->saveButton = canvas.addComponent<ofxGameUI::Button>();
-	saveButton->text = u8"•Û‘¶";
+	saveButton->text = u8"ä¿å­˜";
 	this->resumeButton = canvas.addComponent<ofxGameUI::Button>();
-	resumeButton->text = u8"ÄŠJ";
+	resumeButton->text = u8"å†é–‹";
 	this->backButton = canvas.addComponent<ofxGameUI::Button>();
-	backButton->text = u8"–ß‚é";
+	backButton->text = u8"æˆ»ã‚‹";
 	this->invBackImage = canvas.addComponent<ofxGameUI::Image>();
 	invBackImage->icon = "static/inv.png";
-	//ƒuƒƒbƒNˆê——‚ğ•Û‘¶‚·‚é
+	//ãƒ–ãƒ­ãƒƒã‚¯ä¸€è¦§ã‚’ä¿å­˜ã™ã‚‹
 	glm::vec3 offset = glm::vec3(1280 - 600, 720 - 450, 0) / 2;
 	glm::vec3 cellPos(0,0,0);
 	offset.x += 10;
@@ -55,12 +55,12 @@ void GamePauseUI::init() {
 	cellImage->icon = "static/cell.png";
 	cellImage->position = cellPos;
 	canvas.load();
-	// ƒŒƒCƒAƒEƒg
+	// ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆ
 	saveButton->right(1280);
 	resumeButton->right(1280);
 	backButton->right(1280);
 	invBackImage->center(1280, 720);
-	//ƒ{ƒ^ƒ“‚ğ•À‚×‚é
+	//ãƒœã‚¿ãƒ³ã‚’ä¸¦ã¹ã‚‹
 	saveButton->position.y = 720 - saveButton->getSize().y - backButton->getSize().y - resumeButton->getSize().y - 10;
 	resumeButton->position.y = 720 - resumeButton->getSize().y - backButton->getSize().y - 5;
 	backButton->position.y = 720 - backButton->getSize().y;
@@ -77,7 +77,7 @@ void GamePauseUI::mousePressed(int x, int y, int button) {
 	saveButton->mousePressed(x, y, button);
 	resumeButton->mousePressed(x, y, button);
 	backButton->mousePressed(x, y, button);
-	//ƒuƒƒbƒN‘I‘ğˆ—
+	//ãƒ–ãƒ­ãƒƒã‚¯é¸æŠå‡¦ç†
 	glm::vec3 offset = glm::vec3(1280 - 600, 720 - 450, 0) / 2;
 	offset.x += 10;
 	offset.y += 10;

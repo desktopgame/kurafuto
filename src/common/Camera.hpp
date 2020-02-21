@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef SHADER_CAMERA_HPP
 #define SHADER_CAMERA_HPP
 #include <ofEasyCam.h>

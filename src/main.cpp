@@ -1,4 +1,4 @@
-#include "ofMain.h"
+﻿#include "ofMain.h"
 #include "ofApp.h"
 #ifndef _DEBUG
 #pragma comment(linker, "/subsystem:\"windows\" /entry:\"mainCRTStartup\"")
@@ -8,7 +8,7 @@
 int main( ){
 	ofGLFWWindowSettings settings;
 	settings.glVersionMajor = 4;
-	settings.glVersionMinor = 1;
+	settings.glVersionMinor = 5;
 	settings.setSize(1280, 720);
 //	settings.resizable = false;
 	settings.windowMode = ofWindowMode::OF_WINDOW;

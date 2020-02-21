@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef GAME_PLAYERHAND_HPP
 #define GAME_PLAYERHAND_HPP
 #include <glm/glm.hpp>

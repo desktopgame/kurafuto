@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef SCENE_BASESCENE_HPP
 #define SCENE_BASESCENE_HPP
 #include "IScene.hpp"

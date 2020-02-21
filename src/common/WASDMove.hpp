@@ -1,45 +1,45 @@
-#pragma once
+﻿#pragma once
 #ifndef COMMON_WASDMOVE_HPP
 #define COMMON_WASDMOVE_HPP
 #include <ofVec3f.h>
 namespace planet {
 /**
  * WASDMove
- * �́A��l�̎��_�̃Q�[���ɂ�����L�[�{�[�h����ň�ʓI��WASD���T�|�[�g���܂��B
+ * は、一人称視点のゲームにおけるキーボード操作で一般的なWASDをサポートします。
  */
 class WASDMove {
        public:
         explicit WASDMove();
 
         /**
-         * �L�������܂��B
+         * 有効化します。
          */
         void enable();
 
         /**
-         * ���������܂��B
+         * 無効化します。
          */
         void disable();
 
         /**
-         * �L�[���͂����o���܂��B
+         * キー入力を検出します。
          */
         void update();
 
         /**
-         * �X�v�����g���Ȃ� 2 ���A����ȊO�Ȃ� 1 ��Ԃ��܂��B
+         * スプリント中なら 2 を、それ以外なら 1 を返します。
          * @return
          */
         float getScale() const;
 
         /**
-         * ���݂̈ړ�������Ԃ��܂��B
+         * 現在の移動方向を返します。
          * @return
          */
         glm::ivec2 getAxis() const;
 
         /**
-         * �X�v�����g���Ȃ� true ��Ԃ��܂��B
+         * スプリント中なら true を返します。
          */
         bool isSprint() const;
 

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef SCENE_SCENEMANAGER_HPP
 #define SCENE_SCENEMANAGER_HPP
 #include <memory>

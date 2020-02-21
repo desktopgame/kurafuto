@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef BIOME_STAIRSBIOME_HPP
 #define BIOME_STAIRSBIOME_HPP
 #include <ofxPlanet.h>

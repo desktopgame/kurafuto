@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef GAME_PLAYSCENE_HPP
 #define GAME_PLAYSCENE_HPP
 #include <ofxPlanet.h>

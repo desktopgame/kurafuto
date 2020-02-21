@@ -1,4 +1,4 @@
-#include "PlainBiome.hpp"
+﻿#include "PlainBiome.hpp"
 #include <algorithm>
 
 PlainBiome::PlainBiome(const std::string & structure, int weight) : BasicBiome(), structure(structure),weight(weight) {

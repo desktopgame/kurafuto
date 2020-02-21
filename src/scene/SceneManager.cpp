@@ -1,4 +1,4 @@
-#include "SceneManager.hpp"
+﻿#include "SceneManager.hpp"
 #include "IScene.hpp"
 
 SceneManager::SceneManager() : currentScene(), map() {
