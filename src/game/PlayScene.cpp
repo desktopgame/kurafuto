@@ -225,7 +225,7 @@ void PlayScene::loadWorld() {
 		if (sizeStr == "Small") {
 			this->size = glm::ivec3(64, 64, 64);
 		}
-		else if (sizeStr == "Default") {
+		else if (sizeStr == "Medium") {
 			this->size = glm::ivec3(128, 64, 128);
 		}
 		else if (sizeStr == "Big") {

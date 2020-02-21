@@ -70,7 +70,7 @@ void WorldCreateScene::onInit() {
 	biomeDropdown->items.push_back("Hill");
 	sizeDropdown->fontSize = 40;
 	sizeDropdown->items.push_back("Small");
-	sizeDropdown->items.push_back("Default");
+	sizeDropdown->items.push_back("Medium");
 	sizeDropdown->items.push_back("Big");
 	createButton->text = u8"生成";
 	backButton->text = u8"戻る";
