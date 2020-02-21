@@ -219,6 +219,7 @@ void PlayScene::loadWorld() {
 		planet->allocate(size);
 		planet->getWorld()->load(table);
 		planet->getWorld()->getChunk()->split(32);
+		ifs.close();
 	} else {
 		auto sizeStr = createScene->getSize();
 		if (sizeStr == "Small") {
