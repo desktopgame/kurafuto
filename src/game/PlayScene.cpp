@@ -218,7 +218,7 @@ void PlayScene::loadWorld() {
 		}
 		planet->allocate(size);
 		planet->getWorld()->load(table);
-		//planet->getWorld()->getChunk()->split(32);
+		planet->getWorld()->getChunk()->split(32);
 		ifs.close();
 	} else {
 		auto sizeStr = createScene->getSize();
@@ -232,7 +232,7 @@ void PlayScene::loadWorld() {
 			this->size = glm::ivec3(160, 64, 160);
 		}
 		planet->generate(size, biomeMap.at(createScene->getBiome())());
-		//planet->getWorld()->getChunk()->split(32);
+		planet->getWorld()->getChunk()->split(32);
 		this->fileName = createScene->getWorldName();
 	}
 	camera.setScreenSize(glm::vec2(1280, 720));
