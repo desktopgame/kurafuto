@@ -106,6 +106,9 @@
     <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Label.cpp">
       <Filter>addons\ofxGameUI\src\gui</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Slider.cpp">
+      <Filter>addons\ofxGameUI\src\gui</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\addons\ofxIcon\src\ofxIcon.cpp">
       <Filter>addons\ofxIcon\src</Filter>
     </ClCompile>
@@ -411,6 +414,9 @@
       <Filter>addons\ofxGameUI\src\gui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Label.hpp">
+      <Filter>addons\ofxGameUI\src\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Slider.hpp">
       <Filter>addons\ofxGameUI\src\gui</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxGameUI\src\ofxGameUI.h">

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef GAME_STRUCTS_HPP
 #define GAME_STRUCTS_HPP
 #include <string>

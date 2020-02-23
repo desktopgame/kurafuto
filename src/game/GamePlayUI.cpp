@@ -1,4 +1,4 @@
-#include "GamePlayUI.hpp"
+﻿#include "GamePlayUI.hpp"
 
 GamePlayUI::GamePlayUI() : playCanvas(), crosshairImage() {
 }

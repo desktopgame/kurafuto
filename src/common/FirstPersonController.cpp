@@ -1,4 +1,4 @@
-#include "FirstPersonController.hpp"
+ï»¿#include "FirstPersonController.hpp"
 
 #include <ofBaseApp.h>
 #include <ofEvents.h>
@@ -16,7 +16,8 @@ FirstPersonController::FirstPersonController()
       moveSpeed(0.2f),
       jumpSpeed(0.6f),
       rotateSpeed(0.1f),
-      velocity() {}
+      velocity(),
+	moveLeft(false), moveRight(false), moveFront(false), moveBack(false){}
 
 void FirstPersonController::enable() {
         mouseScroll.enable();
@@ -34,7 +35,7 @@ void FirstPersonController::update() {
         glm::ivec2 axis = wasdMove.getAxis();
         this->moveLeft = this->moveRight = this->moveFront = this->moveBack =
             false;
-        // ‰ñ“]î•ñ‚ÌÝ’è
+        // å›žè»¢æƒ…å ±ã®è¨­å®š
         if (this->mode == Mode::Mouse) {
                 transform.rotation.x += mouseScroll.getAmount().x * rotateSpeed;
                 transform.rotation.y += mouseScroll.getAmount().y * rotateSpeed;
@@ -61,7 +62,7 @@ void FirstPersonController::update() {
         if (transform.rotation.z > 360) {
                 transform.rotation.z -= 360;
         }
-        // ˆÚ“®•ûŒü‚ÌÝ’è
+        // ç§»å‹•æ–¹å‘ã®è¨­å®š
         this->velocity = glm::vec3();
         glm::vec3 force = glm::vec3(wasdMove.getScale() * moveSpeed, 0,
                                     wasdMove.getScale() * moveSpeed);

@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #ifndef COMMON_FIRSTPERSONCONTROLLER_HPP
 #define COMMON_FIRSTPERSONCONTROLLER_HPP
 #include <string>
@@ -8,7 +8,7 @@
 #include "WASDMove.hpp"
 namespace planet {
 /**
- * FirstPersonController ‚ÍAˆêlÌ‚ÌƒJƒƒ‰§Œä‚ğs‚¤‚½‚ß‚ÌƒNƒ‰ƒX‚Å‚·B
+ * FirstPersonController ã¯ã€ä¸€äººç§°ã®ã‚«ãƒ¡ãƒ©åˆ¶å¾¡ã‚’è¡Œã†ãŸã‚ã®ã‚¯ãƒ©ã‚¹ã§ã™ã€‚
  */
 class FirstPersonController {
        public:
@@ -16,100 +16,100 @@ class FirstPersonController {
         explicit FirstPersonController();
 
         /**
-         * —LŒø‰»‚µ‚Ü‚·B
+         * æœ‰åŠ¹åŒ–ã—ã¾ã™ã€‚
          */
         void enable();
 
         /**
-         * –³Œø‰»‚µ‚Ü‚·B
+         * ç„¡åŠ¹åŒ–ã—ã¾ã™ã€‚
          */
         void disable();
 
         /**
-         * “ü—Í‚ğƒ`ƒFƒbƒN‚µ‚ÄŒ»İ‚Ìis•ûŒü‚â—Í‚ğŒvZ‚µ‚Ü‚·B
+         * å…¥åŠ›ã‚’ãƒã‚§ãƒƒã‚¯ã—ã¦ç¾åœ¨ã®é€²è¡Œæ–¹å‘ã‚„åŠ›ã‚’è¨ˆç®—ã—ã¾ã™ã€‚
          */
         void update();
 
         /**
-         * Œ»İ‚Ì‰ñ“]‚ğ•Ô‚µ‚Ü‚·B
+         * ç¾åœ¨ã®å›è»¢ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         glm::vec3 getRotation() const;
 
         /**
-         * Œ»İ‚Ì•ûŒü‚ğ•Ô‚µ‚Ü‚·B
+         * ç¾åœ¨ã®æ–¹å‘ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         glm::vec3 getVelocity() const;
 
         /**
-         * ¶‚ÉˆÚ“®‚µ‚Ä‚¢‚é‚È‚ç true ‚ğ•Ô‚µ‚Ü‚·B
+         * å·¦ã«ç§»å‹•ã—ã¦ã„ã‚‹ãªã‚‰ true ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         bool isMoveLeft() const;
 
         /**
-         * ‰E‚ÉˆÚ“®‚µ‚Ä‚¢‚é‚È‚ç true ‚ğ•Ô‚µ‚Ü‚·B
+         * å³ã«ç§»å‹•ã—ã¦ã„ã‚‹ãªã‚‰ true ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         bool isMoveRight() const;
 
         /**
-         * ‘O‚ÉˆÚ“®‚µ‚Ä‚¢‚é‚È‚ç true ‚ğ•Ô‚µ‚Ü‚·B
+         * å‰ã«ç§»å‹•ã—ã¦ã„ã‚‹ãªã‚‰ true ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         bool isMoveFront() const;
 
         /**
-         * Œã‚ë‚ÉˆÚ“®‚µ‚Ä‚¢‚é‚È‚ç true ‚ğ•Ô‚µ‚Ü‚·B
+         * å¾Œã‚ã«ç§»å‹•ã—ã¦ã„ã‚‹ãªã‚‰ true ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         bool isMoveBack() const;
 
         /**
-         * ƒ‚[ƒh‚ğİ’è‚µ‚Ü‚·B
+         * ãƒ¢ãƒ¼ãƒ‰ã‚’è¨­å®šã—ã¾ã™ã€‚
          * @param mode
          */
         void setMode(const Mode mode);
 
         /**
-         * Œ»İ‚Ìƒ‚[ƒh‚ğ•Ô‚µ‚Ü‚·B
+         * ç¾åœ¨ã®ãƒ¢ãƒ¼ãƒ‰ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         Mode getMode() const;
 
         /**
-         * ˆÚ“®‘¬“x‚ğİ’è‚µ‚Ü‚·B
+         * ç§»å‹•é€Ÿåº¦ã‚’è¨­å®šã—ã¾ã™ã€‚
          * @param moveSpeed
          */
         void setMoveSpeed(float moveSpeed);
 
         /**
-         * ˆÚ“®‘¬“x‚ğ•Ô‚µ‚Ü‚·B
+         * ç§»å‹•é€Ÿåº¦ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         float getMoveSpeed() const;
 
         /**
-         * ƒWƒƒƒ“ƒv—Í‚ğİ’è‚µ‚Ü‚·B
+         * ã‚¸ãƒ£ãƒ³ãƒ—åŠ›ã‚’è¨­å®šã—ã¾ã™ã€‚
          * @param jumpSpeed
          */
         void setJumpSpeed(float jumpSpeed);
 
         /**
-         * ƒWƒƒƒ“ƒv—Í‚ğ•Ô‚µ‚Ü‚·B
+         * ã‚¸ãƒ£ãƒ³ãƒ—åŠ›ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         float getJumpSpeed() const;
 
         /**
-         * ‰ñ“]‘¬“x‚ğİ’è‚µ‚Ü‚·B
+         * å›è»¢é€Ÿåº¦ã‚’è¨­å®šã—ã¾ã™ã€‚
          * @param rotateSpeed
          */
         void setRotateSpeed(float rotateSpeed);
 
         /**
-         * ‰ñ“]‘¬“x‚ğ•Ô‚µ‚Ü‚·B
+         * å›è»¢é€Ÿåº¦ã‚’è¿”ã—ã¾ã™ã€‚
          * @return
          */
         float getRotateSpeed() const;

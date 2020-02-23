@@ -1,11 +1,11 @@
-#include "WASDMove.hpp"
+﻿#include "WASDMove.hpp"
 
 #include <ofAppRunner.h>
 
 #include "glfw.hpp"
 namespace planet {
 
-WASDMove::WASDMove() : enabled(false), axis() {}
+WASDMove::WASDMove() : enabled(false), axis(), sprint(false) {}
 
 void WASDMove::enable() { this->enabled = true; }
 

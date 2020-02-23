@@ -1,4 +1,4 @@
-#include "WorldOpenScene.hpp"
+ï»¿#include "WorldOpenScene.hpp"
 
 WorldOpenScene::WorldOpenScene() : canvas(), worldDropdown(), openButton(), fileVec(), opened(false) {
 }
@@ -29,7 +29,7 @@ ofFile WorldOpenScene::getOpenFile() const {
 
 void WorldOpenScene::onInit() {
 	fileVec.clear();
-	//ƒfƒBƒŒƒNƒgƒŠ‚ğ“Ç‚İ‚Ş
+	//ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’èª­ã¿è¾¼ã‚€
 	ofDirectory playDir("play");
 	if (!playDir.exists()) {
 		playDir.create();
@@ -44,17 +44,17 @@ void WorldOpenScene::onInit() {
 		worldDropdown->items.push_back(file.getFileName());
 	}
 	this->openButton = canvas.addComponent<ofxGameUI::Button>();
-	openButton->text = u8"ŠJ‚­";
+	openButton->text = u8"é–‹ã";
 	this->backButton = canvas.addComponent<ofxGameUI::Button>();
-	backButton->text = u8"–ß‚é";
+	backButton->text = u8"æˆ»ã‚‹";
 	canvas.load();
-	// GUI‚ğì¬
+	// GUIã‚’ä½œæˆ
 	glm::vec3 offset = glm::vec3(-120, 0, 0);
 	worldDropdown->center(1280, 720);
-	//ŠJ‚­ƒ{ƒ^ƒ“
+	//é–‹ããƒœã‚¿ãƒ³
 	openButton->center(1280, 720);
 	openButton->position.x += 380;
-	//–ß‚éƒ{ƒ^ƒ“
+	//æˆ»ã‚‹ãƒœã‚¿ãƒ³
 	backButton->center(1280, 720);
 	backButton->position.y += 200;
 	worldDropdown->position += offset;
@@ -64,7 +64,7 @@ void WorldOpenScene::onInit() {
 }
 
 void WorldOpenScene::onShow() {
-	//ƒfƒBƒŒƒNƒgƒŠ‚ğ“Ç‚İ‚Ş
+	//ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’èª­ã¿è¾¼ã‚€
 	ofDirectory playDir("play");
 	if (!playDir.exists()) {
 		playDir.create();

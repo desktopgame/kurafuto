@@ -147,7 +147,7 @@
     </ClCompile>
     <Link>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -213,6 +213,7 @@
     <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Image.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\InputField.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Label.cpp" />
+    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Slider.cpp" />
     <ClCompile Include="..\..\..\addons\ofxIcon\src\ofxIcon.cpp" />
     <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\biome\BasicBiome.cpp" />
     <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Block.cpp" />
@@ -289,6 +290,7 @@
     <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Image.hpp" />
     <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\InputField.hpp" />
     <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Label.hpp" />
+    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Slider.hpp" />
     <ClInclude Include="..\..\..\addons\ofxGameUI\src\ofxGameUI.h" />
     <ClInclude Include="..\..\..\addons\ofxIcon\src\ofxIcon.h" />
     <ClInclude Include="..\..\..\addons\ofxPlanet\src\ofxPlanet.h" />

@@ -1,4 +1,4 @@
-
+﻿
 #include "ofApp.h"
 #include "ofxPlanet.h"
 #include "biome/StairsBiome.hpp"
@@ -7,7 +7,7 @@
 #include "game/WorldCreateScene.hpp"
 #include "game/WorldOpenScene.hpp"
 #include <ofTrueTypeFont.h>
-
+#include <ofGraphics.h>
 
 ofApp::ofApp()
 	: sceneManager() {
@@ -15,6 +15,7 @@ ofApp::ofApp()
 
 //--------------------------------------------------------------
 void ofApp::setup() {
+	ofSetBackgroundColor(ofColor::white);
 	ofTrueTypeFont::setGlobalDpi(72);
 #if _DEBUG
 	glDebugMessageCallback(

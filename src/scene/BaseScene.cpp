@@ -1,4 +1,4 @@
-#include "BaseScene.hpp"
+﻿#include "BaseScene.hpp"
 
 BaseScene::BaseScene() : nextScene(), isFinished(false), isInitialized(false) {
 }

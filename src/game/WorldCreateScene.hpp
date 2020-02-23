@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef GAME_NEWWORLDSCENE_HPP
 #define GAME_NEWWORLDSCENE_HPP
 #include "../scene/BaseScene.hpp"

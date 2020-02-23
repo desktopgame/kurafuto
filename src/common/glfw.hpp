@@ -1,20 +1,20 @@
-#pragma once
+ï»¿#pragma once
 #ifndef COMMON_GLFW_HPP
 #define COMMON_GLFW_HPP
 namespace planet {
 
 namespace glfw {
 /**
- * ƒ}ƒEƒXƒJ[ƒ\ƒ‹‚ğ•\¦‚µ‚Ü‚·B
+ * ãƒã‚¦ã‚¹ã‚«ãƒ¼ã‚½ãƒ«ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
  */
 void showCursor();
 
 /**
- * ƒ}ƒEƒXƒJ[ƒ\ƒ‹‚ğ”ñ•\¦‚É‚µ‚Ü‚·B
+ * ãƒã‚¦ã‚¹ã‚«ãƒ¼ã‚½ãƒ«ã‚’éè¡¨ç¤ºã«ã—ã¾ã™ã€‚
  */
 void hideCursor();
 /**
- * w’è‚ÌƒL[‚ª‰Ÿ‚³‚ê‚Ä‚¢‚é‚È‚ç true ‚ğ•Ô‚µ‚Ü‚·B
+ * æŒ‡å®šã®ã‚­ãƒ¼ãŒæŠ¼ã•ã‚Œã¦ã„ã‚‹ãªã‚‰ true ã‚’è¿”ã—ã¾ã™ã€‚
  * @param keycode
  * @return
  */

@@ -1,4 +1,4 @@
-#include "WorldCreateScene.hpp"
+ï»¿#include "WorldCreateScene.hpp"
 #include <ofGraphics.h>
 
 WorldCreateScene::WorldCreateScene()
@@ -57,11 +57,11 @@ void WorldCreateScene::onInit() {
 	this->sizeDropdown = canvas.addComponent<ofxGameUI::Dropdown>();
 	this->createButton = canvas.addComponent<ofxGameUI::Button>();
 	this->backButton = canvas.addComponent<ofxGameUI::Button>();
-	//ƒ[ƒ‹ƒh–¼: [  ]
-	biomeLabel->text = u8"ƒoƒCƒI[ƒ€";
-	worldNameLabel->text = u8"ƒ[ƒ‹ƒh–¼";
+	//ãƒ¯ãƒ¼ãƒ«ãƒ‰å: [  ]
+	biomeLabel->text = u8"ãƒã‚¤ã‚ªãƒ¼ãƒ ";
+	worldNameLabel->text = u8"ãƒ¯ãƒ¼ãƒ«ãƒ‰å";
 	worldNameInputField->fontSize = 40;
-	sizeLabel->text = u8"‘å‚«‚³";
+	sizeLabel->text = u8"å¤§ãã•";
 	biomeDropdown->fontSize = 40;
 	biomeDropdown->items.push_back("Stairs/Tree");
 	biomeDropdown->items.push_back("Stairs/House");
@@ -70,10 +70,10 @@ void WorldCreateScene::onInit() {
 	biomeDropdown->items.push_back("Hill");
 	sizeDropdown->fontSize = 40;
 	sizeDropdown->items.push_back("Small");
-	sizeDropdown->items.push_back("Default");
+	sizeDropdown->items.push_back("Medium");
 	sizeDropdown->items.push_back("Big");
-	createButton->text = u8"¶¬";
-	backButton->text = u8"–ß‚é";
+	createButton->text = u8"ç”Ÿæˆ";
+	backButton->text = u8"æˆ»ã‚‹";
 	canvas.load();
 
 	worldNameLabel->center(1280, 720);
@@ -81,23 +81,23 @@ void WorldCreateScene::onInit() {
 	worldNameLabel->position.y = 10;
 	worldNameInputField->center(1280, 720);
 	worldNameInputField->position.y = 10;
-	//ƒoƒCƒI[ƒ€: [  ]
+	//ãƒã‚¤ã‚ªãƒ¼ãƒ : [  ]
 	biomeLabel->center(1280,720);
 	biomeLabel->position.x -= 320;
 	biomeLabel->position.y = 80;
 	biomeDropdown->center(1280, 720);
 	biomeDropdown->position.y = 80;
-	//‘å‚«‚³: [  ]
+	//å¤§ãã•: [  ]
 	sizeLabel->center(1280, 720);
 	sizeLabel->position.x -= 320;
 	sizeLabel->position.y = 150;
 	sizeDropdown->center(1280, 720);
 	sizeDropdown->position.y = 150;
-	//¶¬ƒ{ƒ^ƒ“
+	//ç”Ÿæˆãƒœã‚¿ãƒ³
 	createButton->center(1280, 720);
-	//–ß‚éƒ{ƒ^ƒ“
+	//æˆ»ã‚‹ãƒœã‚¿ãƒ³
 	backButton->center(1280, 720);
-	//ƒŒƒCƒAƒEƒgC³
+	//ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆä¿®æ­£
 	glm::vec3 up(0, -40, 0);
 	worldNameLabel->position += offset + up;
 	worldNameInputField->position += offset + up;

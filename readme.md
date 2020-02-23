@@ -1,5 +1,6 @@
 # kurafuto
 minecraftクローンを目指しているプロジェクトです。
+![実行画面](mov.gif)
 
 ## ビルド
 openFrameworks を 使用して実装されています。  

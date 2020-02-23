@@ -1,4 +1,4 @@
-#include "PlayScene.hpp"
+ï»¿#include "PlayScene.hpp"
 #include <ofAppRunner.h>
 #include <ofEvents.h>
 #include <ofGraphics.h>
@@ -51,7 +51,7 @@ void PlayScene::keyPressed(int key) {
 
 // protected
 void PlayScene::onInit() {
-	// ƒuƒƒbƒN’è‹`ƒtƒ@ƒCƒ‹‚Ì“Ç‚Ýž‚Ý
+	// ãƒ–ãƒ­ãƒƒã‚¯å®šç¾©ãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿
 	auto texBuf = ofBufferFromFile("textures.json");
 	auto blockBuf = ofBufferFromFile("blocks.json");
 	ofxPlanet::TextureInfoCollection tic;
@@ -61,23 +61,23 @@ void PlayScene::onInit() {
 	ofxPlanet::BlockPack::load(bic)->select();
 	ofxPlanet::TexturePack::load(tic)->select();
 	ofxPlanet::TexturePack::getCurrent()->resolve();
-	//UI‚Ì‰Šú‰»
+	//UIã®åˆæœŸåŒ–
 	pauseUI.onSave = std::bind(&PlayScene::on_save, this);
 	pauseUI.onResume = std::bind(&PlayScene::on_resume, this);
 	pauseUI.onBack = std::bind(&PlayScene::on_back, this);
 	playUI.init();
 	pauseUI.init();
-	//ƒVƒF[ƒ_[“Ç‚Ýž‚Ý
+	//ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼èª­ã¿è¾¼ã¿
 	shader.setupShaderFromSource(GL_VERTEX_SHADER,Shaders::WORLD_VERTEX_SHADER);
 	shader.setupShaderFromSource(GL_FRAGMENT_SHADER,Shaders::WORLD_FRAGMENT_SHADER);
 	shader.bindDefaults();
 	shader.linkProgram();
 	this->planet = std::make_shared<ofxPlanet::Planet>(shader);
-	biomeMap.insert_or_assign("Stairs/Tree", std::make_shared<StairsBiome>(Structs::TREE, 12));
-	biomeMap.insert_or_assign("Stairs/House", std::make_shared<StairsBiome>(Structs::HOUSE, 12));
-	biomeMap.insert_or_assign("Plain/Tree", std::make_shared<PlainBiome>(Structs::TREE, 12));
-	biomeMap.insert_or_assign("Plain/House", std::make_shared<PlainBiome>(Structs::HOUSE, 36));
-	biomeMap.insert_or_assign("Hill", std::make_shared<HillBiome>());
+	biomeMap.insert_or_assign("Stairs/Tree", []() { return std::make_shared<StairsBiome>(Structs::TREE, 12); });
+	biomeMap.insert_or_assign("Stairs/House", []() { return std::make_shared<StairsBiome>(Structs::HOUSE, 12); });
+	biomeMap.insert_or_assign("Plain/Tree", []() { return std::make_shared<PlainBiome>(Structs::TREE, 12); });
+	biomeMap.insert_or_assign("Plain/House", [] {return std::make_shared<PlainBiome>(Structs::HOUSE, 36); });
+	biomeMap.insert_or_assign("Hill", []() {return std::make_shared<HillBiome>(); });
 	this->playerHand = std::make_shared<PlayerHand>(planet, fpsCon, camera);
 }
 
@@ -101,16 +101,16 @@ void PlayScene::onUpdate() {
 	if (!this->playMode) {
 		return;
 	}
-	// ƒJƒƒ‰‚ðXV
+	// ã‚«ãƒ¡ãƒ©ã‚’æ›´æ–°
 	auto w = planet->getWorld();
 	const int wsx = w->getXSize();
 	const int wsy = w->getYSize();
 	const int wsz = w->getZSize();
 	const int OF_KEY_SPACE = 32;
-	// WASD, –îˆóƒL[‚É‚æ‚éˆÚ“®‚Æ‰ñ“]
+	// WASD, çŸ¢å°ã‚­ãƒ¼ã«ã‚ˆã‚‹ç§»å‹•ã¨å›žè»¢
 	fpsCon.update();
 	camera.setPosition(camera.getPosition() + fpsCon.getVelocity());
-	// ã¸, ‰º~
+	// ä¸Šæ˜‡, ä¸‹é™
 	if (ofGetKeyPressed(OF_KEY_SPACE)) {
 		camera.setPosition(camera.getPosition() +
 			glm::vec3(0, 0.8f, 0));
@@ -126,7 +126,7 @@ void PlayScene::onUpdate() {
 }
 
 void PlayScene::onDraw() {
-	// ƒVƒF[ƒ_[‚ðXV
+	// ã‚·ã‚§ãƒ¼ãƒ€ãƒ¼ã‚’æ›´æ–°
 	camera.rehash();
 	shader.begin();
 	shader.setUniform4f("uAmbient", glm::vec4(0.5f, 0.5f, 0.5f, 1.0f));
@@ -142,6 +142,7 @@ void PlayScene::onDraw() {
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 	planet->getWorld()->getChunk()->draw();
+
 	playerHand->drawPutBlock();
 	playerHand->drawDestroyBlock();
 	
@@ -189,7 +190,7 @@ void PlayScene::loadWorld() {
 	auto openScene = this->openSceneRef.lock();
 	if (openScene->isOpened()) {
 		openScene->reset();
-		// “Ç‚Ýž‚Ý
+		// èª­ã¿è¾¼ã¿
 		ofxPlanet::BlockTable table(128, 64, 128);
 		int lineIndex = 0;
 		ofFile file = openScene->getOpenFile();
@@ -218,18 +219,19 @@ void PlayScene::loadWorld() {
 		planet->allocate(size);
 		planet->getWorld()->load(table);
 		planet->getWorld()->getChunk()->split(32);
+		ifs.close();
 	} else {
 		auto sizeStr = createScene->getSize();
 		if (sizeStr == "Small") {
 			this->size = glm::ivec3(64, 64, 64);
 		}
-		else if (sizeStr == "Default") {
+		else if (sizeStr == "Medium") {
 			this->size = glm::ivec3(128, 64, 128);
 		}
 		else if (sizeStr == "Big") {
 			this->size = glm::ivec3(160, 64, 160);
 		}
-		planet->generate(size, biomeMap.at(createScene->getBiome()));
+		planet->generate(size, biomeMap.at(createScene->getBiome())());
 		planet->getWorld()->getChunk()->split(32);
 		this->fileName = createScene->getWorldName();
 	}

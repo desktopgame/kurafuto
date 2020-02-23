@@ -1,4 +1,4 @@
-#include "StairsBiome.hpp"
+﻿#include "StairsBiome.hpp"
 
 StairsBiome::StairsBiome(const std::string& structure, int weight) : BasicBiome(), structure(structure), weight(weight) {
 }

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef GAME_GAMEPLAYUI_HPP
 #define GAME_GAMEPLAYUI_HPP
 #include <ofxGameUI.h>
