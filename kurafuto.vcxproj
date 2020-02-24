@@ -180,6 +180,7 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\VertexLayout.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="src\biome\HillBiome.cpp" />
@@ -253,9 +254,9 @@
     <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.c" />
     <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.c" />
     <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.c" />
-    <ClCompile Include="VertexLayout.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\VertexLayout.hpp" />
     <ClInclude Include="src\ofApp.h" />
     <ClInclude Include="src\biome\HillBiome.hpp" />
     <ClInclude Include="src\biome\PlainBiome.hpp" />
@@ -347,7 +348,6 @@
     <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug.h" />
     <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug_c.h" />
     <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.h" />
-    <ClInclude Include="VertexLayout.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
