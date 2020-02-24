@@ -34,6 +34,7 @@ protected:
 	void onHide();
 	void onUpdate();
 	void onDraw();
+	void on_export();
 	void on_save();
 	void on_resume();
 	void on_back();

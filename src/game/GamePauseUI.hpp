@@ -19,11 +19,13 @@ public:
 
 	int getPutBlockId() const;
 
+	std::function<void()> onExport;
 	std::function<void()> onSave;
 	std::function<void()> onResume;
 	std::function<void()> onBack;
 private:
 	ofxGameUI::Canvas canvas;
+	std::shared_ptr<ofxGameUI::Button> exportButton;
 	std::shared_ptr<ofxGameUI::Button> saveButton;
 	std::shared_ptr<ofxGameUI::Button> backButton;
 	std::shared_ptr<ofxGameUI::Button> resumeButton;

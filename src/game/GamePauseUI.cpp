@@ -3,6 +3,7 @@
 
 GamePauseUI::GamePauseUI() : 
 	canvas(), 
+	exportButton(),
 	saveButton(),
 	backButton(), 
 	invBackImage(),
@@ -15,7 +16,8 @@ GamePauseUI::GamePauseUI() :
 }
 
 void GamePauseUI::init() {
-
+	this->exportButton = canvas.addComponent<ofxGameUI::Button>();
+	exportButton->text = u8"出力";
 	this->saveButton = canvas.addComponent<ofxGameUI::Button>();
 	saveButton->text = u8"保存";
 	this->resumeButton = canvas.addComponent<ofxGameUI::Button>();
@@ -56,14 +58,17 @@ void GamePauseUI::init() {
 	cellImage->position = cellPos;
 	canvas.load();
 	// レイアウト
+	exportButton->right(1280);
 	saveButton->right(1280);
 	resumeButton->right(1280);
 	backButton->right(1280);
 	invBackImage->center(1280, 720);
 	//ボタンを並べる
+	exportButton->position.y = 720 - saveButton->getSize().y - backButton->getSize().y - resumeButton->getSize().y - saveButton->getSize().y - 15;
 	saveButton->position.y = 720 - saveButton->getSize().y - backButton->getSize().y - resumeButton->getSize().y - 10;
 	resumeButton->position.y = 720 - resumeButton->getSize().y - backButton->getSize().y - 5;
 	backButton->position.y = 720 - backButton->getSize().y;
+	exportButton->callback = onExport;
 	saveButton->callback = onSave;
 	resumeButton->callback = onResume;
 	backButton->callback = onBack;
@@ -74,9 +79,7 @@ void GamePauseUI::draw() {
 }
 
 void GamePauseUI::mousePressed(int x, int y, int button) {
-	saveButton->mousePressed(x, y, button);
-	resumeButton->mousePressed(x, y, button);
-	backButton->mousePressed(x, y, button);
+	canvas.mousePressed(x, y, button);
 	//ブロック選択処理
 	glm::vec3 offset = glm::vec3(1280 - 600, 720 - 450, 0) / 2;
 	offset.x += 10;

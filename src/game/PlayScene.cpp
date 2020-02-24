@@ -62,6 +62,7 @@ void PlayScene::onInit() {
 	ofxPlanet::TexturePack::load(tic)->select();
 	ofxPlanet::TexturePack::getCurrent()->resolve();
 	//UIの初期化
+	pauseUI.onExport = std::bind(&PlayScene::on_export, this);
 	pauseUI.onSave = std::bind(&PlayScene::on_save, this);
 	pauseUI.onResume = std::bind(&PlayScene::on_resume, this);
 	pauseUI.onBack = std::bind(&PlayScene::on_back, this);
@@ -152,6 +153,11 @@ void PlayScene::onDraw() {
 	} else {
 		pauseUI.draw();
 	}
+}
+
+void PlayScene::on_export() {
+	ofxPlanet::WorldIO::saveObj(this->fileName, planet->getWorld());
+	this->playMode = true;
 }
 
 void PlayScene::on_save() {
