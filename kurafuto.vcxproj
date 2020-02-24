@@ -253,6 +253,7 @@
     <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.c" />
     <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.c" />
     <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.c" />
+    <ClCompile Include="VertexLayout.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h" />
@@ -346,6 +347,7 @@
     <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug.h" />
     <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug_c.h" />
     <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.h" />
+    <ClInclude Include="VertexLayout.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
