@@ -226,6 +226,9 @@
     <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.c">
       <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\VertexLayout.cpp">
+      <Filter>addons\ofxPlanet\src\world</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -583,6 +586,9 @@
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.h">
       <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\VertexLayout.hpp">
+      <Filter>addons\ofxPlanet\src\world</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
