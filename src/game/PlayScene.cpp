@@ -124,6 +124,10 @@ void PlayScene::onUpdate() {
 	camera.setLookAt(camera.getPosition() +
 		fpsCon.getTransform().forward());
 	camera.rehash();
+
+	auto viewPos = camera.getPosition();
+	viewPos.y = 0;
+	w->setViewPosition(viewPos / 2);
 }
 
 void PlayScene::onDraw() {
@@ -220,7 +224,6 @@ void PlayScene::loadWorld() {
 		}
 		planet->allocate(size);
 		planet->getWorld()->load(table);
-		planet->getWorld()->getChunk()->split(32);
 		ifs.close();
 	} else {
 		auto sizeStr = createScene->getSize();
@@ -234,11 +237,16 @@ void PlayScene::loadWorld() {
 			this->size = glm::ivec3(160, 64, 160);
 		}
 		planet->generate(size, biomeMap.at(createScene->getBiome())());
-		planet->getWorld()->getChunk()->split(32);
 		this->fileName = createScene->getWorldName();
 	}
+	auto world = planet->getWorld();
+	world->getChunk()->split(32);
+	world->setChunkLoadStyle(ofxPlanet::ChunkLoadStyle::VisibleChunk);
+	world->setViewRange(64);
+
 	camera.setScreenSize(glm::vec2(1280, 720));
 	camera.setPosition(glm::vec3(size.x, size.y*2, size.z));
+	world->setViewPosition(camera.getPosition() / 2.0f);
 	auto& t = fpsCon.getTransform();
 	t.rotation = glm::vec3(90, -90, 0);
 }
