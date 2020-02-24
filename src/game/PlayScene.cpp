@@ -240,8 +240,11 @@ void PlayScene::loadWorld() {
 		this->fileName = createScene->getWorldName();
 	}
 	auto world = planet->getWorld();
+	auto wsize = world->getSize();
+	if (wsize.x >= 128 || wsize.z >= 128) {
+		world->setChunkLoadStyle(ofxPlanet::ChunkLoadStyle::VisibleChunk);
+	}
 	world->getChunk()->split(32);
-	world->setChunkLoadStyle(ofxPlanet::ChunkLoadStyle::VisibleChunk);
 	world->setViewRange(64);
 
 	camera.setScreenSize(glm::vec2(1280, 720));
