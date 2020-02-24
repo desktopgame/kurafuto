@@ -130,10 +130,6 @@ void PlayScene::onDraw() {
 	// シェーダーを更新
 	camera.rehash();
 	shader.begin();
-	shader.setUniform4f("uAmbient", glm::vec4(0.5f, 0.5f, 0.5f, 1.0f));
-	shader.setUniform4f("uDiffuse", glm::vec4(0.5f, 0.5f, 0.5f, 1.0f));
-	shader.setUniform4f("uSpecular", glm::vec4(0.f, 0.f, 0.f, 1.0f));
-	shader.setUniform1f("uShininess", 50);
 	shader.setUniformMatrix4f("uMVPMatrix", (camera.getProjectionMatrix() * camera.getViewMatrix()));
 	shader.setUniformMatrix4f("uNormalMatrix", (camera.computeNormalMatrix(glm::mat4(1.0f))));
 	shader.end();
