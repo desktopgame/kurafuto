@@ -21,7 +21,7 @@
 PlayScene::PlayScene(std::weak_ptr<WorldCreateScene> createSceneRef, std::weak_ptr<WorldOpenScene> openSceneRef) :
 	createSceneRef(createSceneRef),
 	openSceneRef(openSceneRef), 
-	planet(nullptr),
+	planet(),
 	biomeMap(),
 	fileName(),
 	size(),
@@ -73,7 +73,7 @@ void PlayScene::onInit() {
 	shader.setupShaderFromSource(GL_FRAGMENT_SHADER,Shaders::WORLD_FRAGMENT_SHADER);
 	shader.bindDefaults();
 	shader.linkProgram();
-	this->planet = std::make_shared<ofxPlanet::Planet>(shader);
+	this->planet = std::make_shared<Planet>(this->shader);
 	biomeMap.insert_or_assign("Stairs/Tree", []() { return std::make_shared<StairsBiome>(Structs::TREE, 12); });
 	biomeMap.insert_or_assign("Stairs/House", []() { return std::make_shared<StairsBiome>(Structs::HOUSE, 12); });
 	biomeMap.insert_or_assign("Plain/Tree", []() { return std::make_shared<PlainBiome>(Structs::TREE, 12); });

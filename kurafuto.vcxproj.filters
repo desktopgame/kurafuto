@@ -1,597 +1,621 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <ClCompile Include="src\ofApp.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\biome\HillBiome.cpp">
-      <Filter>src\biome</Filter>
-    </ClCompile>
-    <ClCompile Include="src\biome\PlainBiome.cpp">
-      <Filter>src\biome</Filter>
-    </ClCompile>
-    <ClCompile Include="src\biome\StairsBiome.cpp">
-      <Filter>src\biome</Filter>
-    </ClCompile>
-    <ClCompile Include="src\common\Camera.cpp">
-      <Filter>src\common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\common\FirstPersonController.cpp">
-      <Filter>src\common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\common\glfw.cpp">
-      <Filter>src\common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\common\MouseScroll.cpp">
-      <Filter>src\common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\common\Transform.cpp">
-      <Filter>src\common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\common\WASDMove.cpp">
-      <Filter>src\common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\GamePauseUI.cpp">
-      <Filter>src\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\GamePlayUI.cpp">
-      <Filter>src\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\PlayerHand.cpp">
-      <Filter>src\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\PlayScene.cpp">
-      <Filter>src\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\Shaders.cpp">
-      <Filter>src\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\Structs.cpp">
-      <Filter>src\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\TitleScene.cpp">
-      <Filter>src\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\WorldCreateScene.cpp">
-      <Filter>src\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\game\WorldOpenScene.cpp">
-      <Filter>src\game</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ofApp.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\scene\BaseScene.cpp">
-      <Filter>src\scene</Filter>
-    </ClCompile>
-    <ClCompile Include="src\scene\SceneManager.cpp">
-      <Filter>src\scene</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Button.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Component.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Container.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Dropdown.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\FontCache.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\FontSprite.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\GUIUtility.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Image.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\InputField.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Label.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Slider.cpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxIcon\src\ofxIcon.cpp">
-      <Filter>addons\ofxIcon\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\biome\BasicBiome.cpp">
-      <Filter>addons\ofxPlanet\src\world\biome</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Block.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockInfoCollection.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockPack.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockRenderer.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockTable.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Chunk.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\csvr\Parser.cpp">
-      <Filter>addons\ofxPlanet\src\world\csvr</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\CubeBatch.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\CubeRenderer.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Cell.cpp">
-      <Filter>addons\ofxPlanet\src\world\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Generator.cpp">
-      <Filter>addons\ofxPlanet\src\world\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Pocket.cpp">
-      <Filter>addons\ofxPlanet\src\world\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Terrain.cpp">
-      <Filter>addons\ofxPlanet\src\world\engine</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\GraphicsBatch.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\GraphicsRenderer.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\IntVec2Hash.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\IntVec3Compare.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\LightTable.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Math.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\MultiBlock.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\objb\MtlBuilder.cpp">
-      <Filter>addons\ofxPlanet\src\world\objb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\objb\ObjBuilder.cpp">
-      <Filter>addons\ofxPlanet\src\world\objb</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Plane.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Planet.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Random.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Texture.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TextureInfoCollection.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TexturePack.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TextureSet.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\WeightTable.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\World.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\WorldIO.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxSOIL\src\ofxSOIL.cpp">
-      <Filter>addons\ofxSOIL\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_DXT.c">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.c">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.c">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.c">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\addons\ofxPlanet\src\world\VertexLayout.cpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="src">
-      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\biome">
-      <UniqueIdentifier>{9DD12BD9-CE39-73C0-0F7E-CC70}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\common">
-      <UniqueIdentifier>{FE56CF09-06BA-2CDB-AEB6-C358}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\game">
-      <UniqueIdentifier>{097A2B9D-257B-165E-E663-6489}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\scene">
-      <UniqueIdentifier>{73142FC3-17CC-1CF8-54A8-DD1E}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons">
-      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxGameUI">
-      <UniqueIdentifier>{218E7CFA-5E5A-B6BE-5127-A740}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxGameUI\src">
-      <UniqueIdentifier>{A4893F37-F66B-5D25-F036-1C83}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxGameUI\src\gui">
-      <UniqueIdentifier>{EF0793BA-087E-B7AC-1C75-6D25}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxIcon">
-      <UniqueIdentifier>{F4E0FDF0-3115-9194-00A9-529A}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxIcon\src">
-      <UniqueIdentifier>{804AD794-6A35-2A6E-9590-C753}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxPlanet">
-      <UniqueIdentifier>{A50E9459-ACBE-DB46-4D6E-A408}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxPlanet\src">
-      <UniqueIdentifier>{0F302137-DAFF-F129-5B66-F10B}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxPlanet\src\world">
-      <UniqueIdentifier>{06124D33-F63E-4CA0-A39D-7FBF}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxPlanet\src\world\biome">
-      <UniqueIdentifier>{94848840-B8F2-7C93-21F4-99BF}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxPlanet\src\world\csvr">
-      <UniqueIdentifier>{BCB6D452-30C6-2929-0947-7830}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxPlanet\src\world\engine">
-      <UniqueIdentifier>{9BC3EBB2-EBDC-7155-5BA7-3D22}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxPlanet\src\world\engine\PerlinNoise">
-      <UniqueIdentifier>{7407F8E5-6091-0A69-4E2A-DE99}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxPlanet\src\world\objb">
-      <UniqueIdentifier>{92D02518-8DD1-2E42-FF12-50E6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxPlanet\src\world\picojson">
-      <UniqueIdentifier>{92B65FE0-7786-42CD-4CBE-A814}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxSOIL">
-      <UniqueIdentifier>{10FB36C2-94DC-C54A-7099-097C}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxSOIL\src">
-      <UniqueIdentifier>{D9B79C52-5CD1-FC6F-F4F4-9491}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxSOIL\libs">
-      <UniqueIdentifier>{75A2E915-E2E5-51B2-400B-A755}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxSOIL\libs\SOIL">
-      <UniqueIdentifier>{446E497B-04FE-FD9F-B6DA-97E8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxSOIL\libs\SOIL\includes">
-      <UniqueIdentifier>{DF667C33-7B8E-3F6D-2531-1D82}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="addons\ofxSOIL\libs\SOIL\src">
-      <UniqueIdentifier>{37D6E160-6E8B-FF9B-DD94-9DF1}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\ofApp.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\biome\HillBiome.hpp">
-      <Filter>src\biome</Filter>
-    </ClInclude>
-    <ClInclude Include="src\biome\PlainBiome.hpp">
-      <Filter>src\biome</Filter>
-    </ClInclude>
-    <ClInclude Include="src\biome\StairsBiome.hpp">
-      <Filter>src\biome</Filter>
-    </ClInclude>
-    <ClInclude Include="src\common\Camera.hpp">
-      <Filter>src\common</Filter>
-    </ClInclude>
-    <ClInclude Include="src\common\FirstPersonController.hpp">
-      <Filter>src\common</Filter>
-    </ClInclude>
-    <ClInclude Include="src\common\glfw.hpp">
-      <Filter>src\common</Filter>
-    </ClInclude>
-    <ClInclude Include="src\common\MouseScroll.hpp">
-      <Filter>src\common</Filter>
-    </ClInclude>
-    <ClInclude Include="src\common\Transform.hpp">
-      <Filter>src\common</Filter>
-    </ClInclude>
-    <ClInclude Include="src\common\WASDMove.hpp">
-      <Filter>src\common</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\GamePauseUI.hpp">
-      <Filter>src\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\GamePlayUI.hpp">
-      <Filter>src\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\PlayerHand.hpp">
-      <Filter>src\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\PlayScene.hpp">
-      <Filter>src\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\Shaders.hpp">
-      <Filter>src\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\Structs.hpp">
-      <Filter>src\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\TitleScene.hpp">
-      <Filter>src\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\WorldCreateScene.hpp">
-      <Filter>src\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\game\WorldOpenScene.hpp">
-      <Filter>src\game</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ofApp.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\BaseScene.hpp">
-      <Filter>src\scene</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\IScene.hpp">
-      <Filter>src\scene</Filter>
-    </ClInclude>
-    <ClInclude Include="src\scene\SceneManager.hpp">
-      <Filter>src\scene</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Button.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Component.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Container.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Dropdown.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\FontCache.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\FontSprite.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\GUISkin.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\GUIUtility.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\IEventHandler.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Image.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\InputField.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Label.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Slider.hpp">
-      <Filter>addons\ofxGameUI\src\gui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxGameUI\src\ofxGameUI.h">
-      <Filter>addons\ofxGameUI\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxIcon\src\ofxIcon.h">
-      <Filter>addons\ofxIcon\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\ofxPlanet.h">
-      <Filter>addons\ofxPlanet\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\biome\BasicBiome.hpp">
-      <Filter>addons\ofxPlanet\src\world\biome</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\biome\Biome.hpp">
-      <Filter>addons\ofxPlanet\src\world\biome</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Block.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockInfoCollection.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockPack.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockRenderer.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockShape.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockSide.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockTable.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Chunk.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\csvr\Parser.hpp">
-      <Filter>addons\ofxPlanet\src\world\csvr</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\CubeBatch.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\CubeRenderer.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Cell.hpp">
-      <Filter>addons\ofxPlanet\src\world\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Generator.hpp">
-      <Filter>addons\ofxPlanet\src\world\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise\PerlinNoise.hpp">
-      <Filter>addons\ofxPlanet\src\world\engine\PerlinNoise</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Pocket.hpp">
-      <Filter>addons\ofxPlanet\src\world\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Terrain.hpp">
-      <Filter>addons\ofxPlanet\src\world\engine</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\GraphicsBatch.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\GraphicsRenderer.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\IntVec2Hash.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\IntVec3Compare.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\LightTable.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Math.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\MultiBlock.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\objb\MtlBuilder.hpp">
-      <Filter>addons\ofxPlanet\src\world\objb</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\objb\ObjBuilder.hpp">
-      <Filter>addons\ofxPlanet\src\world\objb</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Optional.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\picojson\picojson.h">
-      <Filter>addons\ofxPlanet\src\world\picojson</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Plane.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Planet.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Random.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Texture.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TextureInfoCollection.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TexturePack.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TextureSet.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\WeightTable.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\World.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\WorldIO.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\src\ofxSOIL.h">
-      <Filter>addons\ofxSOIL\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\image_DXT.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\image_helper.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\SOIL.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stbi_DDS_aug.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stbi_DDS_aug_c.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stb_image_aug.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_DXT.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug_c.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.h">
-      <Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\addons\ofxPlanet\src\world\VertexLayout.hpp">
-      <Filter>addons\ofxPlanet\src\world</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="icon.rc" />
-  </ItemGroup>
+	<ItemGroup>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\biome\HillBiome.cpp">
+			<Filter>src\biome</Filter>
+		</ClCompile>
+		<ClCompile Include="src\biome\PlainBiome.cpp">
+			<Filter>src\biome</Filter>
+		</ClCompile>
+		<ClCompile Include="src\biome\StairsBiome.cpp">
+			<Filter>src\biome</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\Camera.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\FirstPersonController.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\glfw.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\MouseScroll.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\Transform.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\common\WASDMove.cpp">
+			<Filter>src\common</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\GamePauseUI.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\GamePlayUI.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\Planet.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\PlayerHand.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\PlayScene.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\Shaders.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\Structs.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\TitleScene.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\WorldCreateScene.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\game\WorldOpenScene.cpp">
+			<Filter>src\game</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\scene\BaseScene.cpp">
+			<Filter>src\scene</Filter>
+		</ClCompile>
+		<ClCompile Include="src\scene\SceneManager.cpp">
+			<Filter>src\scene</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Button.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Component.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Container.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Dropdown.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\FontCache.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\FontSprite.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\GUIUtility.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Image.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\InputField.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Label.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxGameUI\src\gui\Slider.cpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxIcon\src\ofxIcon.cpp">
+			<Filter>addons\ofxIcon\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\biome\BasicBiome.cpp">
+			<Filter>addons\ofxPlanet\src\world\biome</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Block.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockInfoCollection.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockPack.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockRenderer.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\BlockTable.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Chunk.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\csvr\Parser.cpp">
+			<Filter>addons\ofxPlanet\src\world\csvr</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\CubeBatch.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\CubeRenderer.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Cell.cpp">
+			<Filter>addons\ofxPlanet\src\world\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Generator.cpp">
+			<Filter>addons\ofxPlanet\src\world\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Pocket.cpp">
+			<Filter>addons\ofxPlanet\src\world\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\engine\Terrain.cpp">
+			<Filter>addons\ofxPlanet\src\world\engine</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\FixedWorld.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\GraphicsBatch.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\GraphicsRenderer.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\IntVec2Hash.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\IntVec3Compare.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\LightTable.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Math.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\MultiBlock.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\objb\MtlBuilder.cpp">
+			<Filter>addons\ofxPlanet\src\world\objb</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\objb\ObjBuilder.cpp">
+			<Filter>addons\ofxPlanet\src\world\objb</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Plane.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Random.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Sector.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\Texture.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TextureInfoCollection.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TexturePack.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\TextureSet.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\UniformLayout.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\VertexLayout.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\WeightTable.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\World.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxPlanet\src\world\WorldIO.cpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxSOIL\src\ofxSOIL.cpp">
+			<Filter>addons\ofxSOIL\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_DXT.c">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.c">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.c">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.c">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="src">
+			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\biome">
+			<UniqueIdentifier>{9DD12BD9-CE39-73C0-0F7E-CC70}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\common">
+			<UniqueIdentifier>{FE56CF09-06BA-2CDB-AEB6-C358}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\game">
+			<UniqueIdentifier>{097A2B9D-257B-165E-E663-6489}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="src\scene">
+			<UniqueIdentifier>{73142FC3-17CC-1CF8-54A8-DD1E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons">
+			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxGameUI">
+			<UniqueIdentifier>{218E7CFA-5E5A-B6BE-5127-A740}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxGameUI\src">
+			<UniqueIdentifier>{A4893F37-F66B-5D25-F036-1C83}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxGameUI\src\gui">
+			<UniqueIdentifier>{EF0793BA-087E-B7AC-1C75-6D25}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxIcon">
+			<UniqueIdentifier>{F4E0FDF0-3115-9194-00A9-529A}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxIcon\src">
+			<UniqueIdentifier>{804AD794-6A35-2A6E-9590-C753}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPlanet">
+			<UniqueIdentifier>{A50E9459-ACBE-DB46-4D6E-A408}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPlanet\src">
+			<UniqueIdentifier>{0F302137-DAFF-F129-5B66-F10B}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPlanet\src\world">
+			<UniqueIdentifier>{06124D33-F63E-4CA0-A39D-7FBF}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPlanet\src\world\biome">
+			<UniqueIdentifier>{94848840-B8F2-7C93-21F4-99BF}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPlanet\src\world\csvr">
+			<UniqueIdentifier>{BCB6D452-30C6-2929-0947-7830}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPlanet\src\world\engine">
+			<UniqueIdentifier>{9BC3EBB2-EBDC-7155-5BA7-3D22}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPlanet\src\world\engine\PerlinNoise">
+			<UniqueIdentifier>{7407F8E5-6091-0A69-4E2A-DE99}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPlanet\src\world\objb">
+			<UniqueIdentifier>{92D02518-8DD1-2E42-FF12-50E6}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxPlanet\src\world\picojson">
+			<UniqueIdentifier>{92B65FE0-7786-42CD-4CBE-A814}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSOIL">
+			<UniqueIdentifier>{10FB36C2-94DC-C54A-7099-097C}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSOIL\src">
+			<UniqueIdentifier>{D9B79C52-5CD1-FC6F-F4F4-9491}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSOIL\libs">
+			<UniqueIdentifier>{75A2E915-E2E5-51B2-400B-A755}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSOIL\libs\SOIL">
+			<UniqueIdentifier>{446E497B-04FE-FD9F-B6DA-97E8}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSOIL\libs\SOIL\includes">
+			<UniqueIdentifier>{DF667C33-7B8E-3F6D-2531-1D82}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxSOIL\libs\SOIL\src">
+			<UniqueIdentifier>{37D6E160-6E8B-FF9B-DD94-9DF1}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\biome\HillBiome.hpp">
+			<Filter>src\biome</Filter>
+		</ClInclude>
+		<ClInclude Include="src\biome\PlainBiome.hpp">
+			<Filter>src\biome</Filter>
+		</ClInclude>
+		<ClInclude Include="src\biome\StairsBiome.hpp">
+			<Filter>src\biome</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\Camera.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\FirstPersonController.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\glfw.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\MouseScroll.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\Transform.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\common\WASDMove.hpp">
+			<Filter>src\common</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\GamePauseUI.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\GamePlayUI.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\Planet.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\PlayerHand.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\PlayScene.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\Shaders.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\Structs.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\TitleScene.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\WorldCreateScene.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\game\WorldOpenScene.hpp">
+			<Filter>src\game</Filter>
+		</ClInclude>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\scene\BaseScene.hpp">
+			<Filter>src\scene</Filter>
+		</ClInclude>
+		<ClInclude Include="src\scene\IScene.hpp">
+			<Filter>src\scene</Filter>
+		</ClInclude>
+		<ClInclude Include="src\scene\SceneManager.hpp">
+			<Filter>src\scene</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Button.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Canvas.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Component.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Container.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Dropdown.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\FontCache.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\FontSprite.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\GUISkin.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\GUIUtility.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\IEventHandler.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Image.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\InputField.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Label.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\gui\Slider.hpp">
+			<Filter>addons\ofxGameUI\src\gui</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxGameUI\src\ofxGameUI.h">
+			<Filter>addons\ofxGameUI\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxIcon\src\ofxIcon.h">
+			<Filter>addons\ofxIcon\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\ofxPlanet.h">
+			<Filter>addons\ofxPlanet\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\biome\BasicBiome.hpp">
+			<Filter>addons\ofxPlanet\src\world\biome</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\biome\Biome.hpp">
+			<Filter>addons\ofxPlanet\src\world\biome</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Block.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockInfoCollection.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockPack.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockRenderer.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockShape.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockSide.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\BlockTable.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Chunk.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\ChunkLoadStyle.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\csvr\Parser.hpp">
+			<Filter>addons\ofxPlanet\src\world\csvr</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\CubeBatch.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\CubeRenderer.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Cell.hpp">
+			<Filter>addons\ofxPlanet\src\world\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Generator.hpp">
+			<Filter>addons\ofxPlanet\src\world\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\PerlinNoise\PerlinNoise.hpp">
+			<Filter>addons\ofxPlanet\src\world\engine\PerlinNoise</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Pocket.hpp">
+			<Filter>addons\ofxPlanet\src\world\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\engine\Terrain.hpp">
+			<Filter>addons\ofxPlanet\src\world\engine</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\FixedWorld.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\GraphicsBatch.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\GraphicsRenderer.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\IntVec2Hash.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\IntVec3Compare.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\IWorld.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\LightTable.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Math.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\MultiBlock.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\objb\MtlBuilder.hpp">
+			<Filter>addons\ofxPlanet\src\world\objb</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\objb\ObjBuilder.hpp">
+			<Filter>addons\ofxPlanet\src\world\objb</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Optional.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\picojson\picojson.h">
+			<Filter>addons\ofxPlanet\src\world\picojson</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Plane.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Random.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Sector.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\Texture.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TextureInfoCollection.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TexturePack.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\TextureSet.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\UniformLayout.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\VertexLayout.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\WeightTable.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\World.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxPlanet\src\world\WorldIO.hpp">
+			<Filter>addons\ofxPlanet\src\world</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\src\ofxSOIL.h">
+			<Filter>addons\ofxSOIL\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\image_DXT.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\image_helper.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\SOIL.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stbi_DDS_aug.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stbi_DDS_aug_c.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\includes\stb_image_aug.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\includes</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_DXT.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\image_helper.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\SOIL.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stbi_DDS_aug_c.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\..\addons\ofxSOIL\libs\SOIL\src\stb_image_aug.h">
+			<Filter>addons\ofxSOIL\libs\SOIL\src</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc" />
+	</ItemGroup>
 </Project>

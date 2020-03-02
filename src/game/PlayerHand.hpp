@@ -7,10 +7,11 @@
 #include <memory>
 #include "../common/FirstPersonController.hpp"
 #include "../common/Camera.hpp"
+#include "Planet.hpp"
 
 class PlayerHand {
 public:
-	explicit PlayerHand(std::shared_ptr<ofxPlanet::Planet> planet, planet::FirstPersonController& fpsCon, Camera& camera);
+	explicit PlayerHand(std::shared_ptr<Planet> planet, planet::FirstPersonController& fpsCon, Camera& camera);
 
 	void drawPutBlock();
 	void drawDestroyBlock();
@@ -26,7 +27,7 @@ public:
 private:
 	static void drawBlock(const Camera& camera, ofBoxPrimitive& box, ofColor color, glm::vec3 pos);
 
-	std::shared_ptr<ofxPlanet::Planet> planet;
+	std::shared_ptr<Planet> planet;
 	planet::FirstPersonController& fpsCon;
 	Camera& camera;
 

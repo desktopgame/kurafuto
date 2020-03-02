@@ -2,7 +2,7 @@
 #include <ofGraphics.h>
 #include <ofAppRunner.h>
 
-PlayerHand::PlayerHand(std::shared_ptr<ofxPlanet::Planet> planet, planet::FirstPersonController& fpsCon, Camera& camera)
+PlayerHand::PlayerHand(std::shared_ptr<Planet> planet, planet::FirstPersonController& fpsCon, Camera& camera)
  : planet(planet), 
    fpsCon(fpsCon),
    camera(camera),

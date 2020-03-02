@@ -18,6 +18,7 @@
 #include "GamePlayUI.hpp"
 #include "GamePauseUI.hpp"
 #include "PlayerHand.hpp"
+#include "Planet.hpp"
 
 class WorldOpenScene;
 class WorldCreateScene;
@@ -55,7 +56,7 @@ private:
 	GamePauseUI pauseUI;
 	std::shared_ptr<PlayerHand> playerHand;
 
-	std::shared_ptr<ofxPlanet::Planet> planet;
+	std::shared_ptr<Planet> planet;
 	std::unordered_map<std::string, BiomeFactory > biomeMap;
 	bool playMode;
 };
